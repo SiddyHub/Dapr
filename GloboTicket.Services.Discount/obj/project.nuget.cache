@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SSI2nDxJT943Df8LU/K+j6FRed1Hw/YqEwivul0kCXpiHppWoHslJvGuWxQ6MzSBsX6pHH1Ke/EuZ3hEiG9Jsw==",
+  "dgSpecHash": "vtXq3A96oIgr+eKtx4MSQGVvdA2AZm6s5JH4n1vD6dMVaY3X06P4r9bzaiMuEB2uehVRx43slzA6ldaSTSLVjw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\simeh\\source\\repos\\Practice\\Microservice-to_dapr\\toDapr\\microservices_core\\04\\demos\\Integration Events\\GloboTicket.Services.Discount\\GloboTicket.Services.Discount.csproj",
+  "projectFilePath": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Services.Discount\\GloboTicket.Services.Discount.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\simeh\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",

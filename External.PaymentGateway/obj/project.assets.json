@@ -475,11 +475,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\simeh\\source\\repos\\Practice\\Microservice-to_dapr\\toDapr\\microservices_core\\04\\demos\\Integration Events\\External.PaymentGateway\\External.PaymentGateway.csproj",
+      "projectUniqueName": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\External.PaymentGateway\\External.PaymentGateway.csproj",
       "projectName": "External.PaymentGateway",
-      "projectPath": "C:\\Users\\simeh\\source\\repos\\Practice\\Microservice-to_dapr\\toDapr\\microservices_core\\04\\demos\\Integration Events\\External.PaymentGateway\\External.PaymentGateway.csproj",
+      "projectPath": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\External.PaymentGateway\\External.PaymentGateway.csproj",
       "packagesPath": "C:\\Users\\simeh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\simeh\\source\\repos\\Practice\\Microservice-to_dapr\\toDapr\\microservices_core\\04\\demos\\Integration Events\\External.PaymentGateway\\obj\\",
+      "outputPath": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\External.PaymentGateway\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

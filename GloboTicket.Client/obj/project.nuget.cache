@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Lu8OOEe4MZeCj3FkxDMEWU4ePW/xHEvpKrJKcxpjSQSByxAwfxk24Mk08af3baBfkZ6HX1m77bVZhyTz5lfhOQ==",
+  "dgSpecHash": "GEAhP56n40jpw6C0uBC4ylsBTXYwk0fZwt/trYYDIiO7wluJVEB/WFIGQSgb+ff8PCGDwgv5i7xU9052di2BHg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\simeh\\source\\repos\\Practice\\Microservice-to_dapr\\toDapr\\microservices_core\\04\\demos\\Integration Events\\GloboTicket.Client\\GloboTicket.Web.csproj",
+  "projectFilePath": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Client\\GloboTicket.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\simeh\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\3.1.5\\microsoft.aspnetcore.mvc.razor.extensions.3.1.5.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\3.1.5\\microsoft.aspnetcore.mvc.razor.runtimecompilation.3.1.5.nupkg.sha512",

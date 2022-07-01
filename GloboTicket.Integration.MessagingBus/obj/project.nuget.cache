@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "trECKVrhqgNrRXiO5KEIbKPo/1sJukitY3sYl3SjaP+A0jj0ZL2JxMUlNjYuug3xXUkj8QJWk29u/RqFm/y/0w==",
+  "dgSpecHash": "I9MKj20xvXukUJ+OMh+9gcjq+j2Enlwtk5tFjvYFWUIaVFfD/7RoKZviTT0u0fWOR9a7ObSlmAgLZe/udDdDqw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\simeh\\source\\repos\\Practice\\Microservice-to_dapr\\toDapr\\microservices_core\\04\\demos\\Integration Events\\GloboTicket.Integration.MessagingBus\\GloboTicket.Integration.MessagingBus.csproj",
+  "projectFilePath": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Integration.MessagingBus\\GloboTicket.Integration.MessagingBus.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\simeh\\.nuget\\packages\\microsoft.azure.amqp\\2.4.5\\microsoft.azure.amqp.2.4.5.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\microsoft.azure.servicebus\\4.1.4\\microsoft.azure.servicebus.4.1.4.nupkg.sha512",

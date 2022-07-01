@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "msV3/+MVVXDgQL6G1zVe/Ip9sGUDcYRmBsws5PiV0zpRl4b+JLlsch2E3tuz/SFJ7gk+/QYOWyc+ONXnRCed0g==",
+  "dgSpecHash": "fvM2uzhEALUJ67Myc+j5n+wmB/2IPjmWp+mGI3l+9SSn29NU1OvIS/CR2fNEYmIApW3mqTryET0o+hnTTMyXEg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\simeh\\source\\repos\\Practice\\Microservice-to_dapr\\toDapr\\microservices_core\\04\\demos\\Integration Events\\GloboTicket.Integration.Messages\\GloboTicket.Integration.Messages.csproj",
+  "projectFilePath": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Integration.Messages\\GloboTicket.Integration.Messages.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\simeh\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

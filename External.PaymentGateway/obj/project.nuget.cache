@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yeN01Z332L522ZkuK5WtHmfm5a5IkxGCGC5mluEn11xxM5JwNF76k9FKxWT1KHAkSkjstNYGVx/9nJLA+pZpZQ==",
+  "dgSpecHash": "2HsiUwgvo7Atq4Ih+ZRt+Oo722No0MwV/cXxqkaav6FuPmWcRoFOgo6HV/rIjroig9hQMUdrufqMvY3QTDnWUA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\simeh\\source\\repos\\Practice\\Microservice-to_dapr\\toDapr\\microservices_core\\04\\demos\\Integration Events\\External.PaymentGateway\\External.PaymentGateway.csproj",
+  "projectFilePath": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\External.PaymentGateway\\External.PaymentGateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\simeh\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.5\\microsoft.extensions.configuration.3.1.5.nupkg.sha512",
