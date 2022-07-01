@@ -32,7 +32,7 @@ namespace GloboTicket.Services.EventCatalog
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddSingleton<IMessageBus, AzServiceBusMessageBus>();
+            //services.AddSingleton<IMessageBus, AzServiceBusMessageBus>();
 
 
             services.AddControllers();

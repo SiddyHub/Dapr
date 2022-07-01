@@ -22,11 +22,11 @@ namespace GloboTicket.Services.Payment
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddHostedService<ServiceBusListener>();
+            //services.AddHostedService<ServiceBusListener>();
             services.AddHttpClient<IExternalGatewayPaymentService, ExternalGatewayPaymentService>(c =>
                 c.BaseAddress = new Uri(Configuration["ApiConfigs:ExternalPaymentGateway:Uri"]));
 
-            services.AddSingleton<IMessageBus, AzServiceBusMessageBus>();
+            //services.AddSingleton<IMessageBus, AzServiceBusMessageBus>();
 
             services.AddControllers();
         }

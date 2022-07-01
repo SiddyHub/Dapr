@@ -33,7 +33,7 @@ namespace GloboTicket.Services.ShoppingBasket
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddHostedService<ServiceBusListener>();
+            //services.AddHostedService<ServiceBusListener>();
 
             var optionsBuilder = new DbContextOptionsBuilder<ShoppingBasketDbContext>();
             optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
@@ -45,7 +45,7 @@ namespace GloboTicket.Services.ShoppingBasket
             services.AddScoped<IEventRepository, EventRepository>();
             services.AddScoped<IBasketChangeEventRepository, BasketChangeEventRepository>();
 
-            services.AddSingleton<IMessageBus, AzServiceBusMessageBus>();
+            //services.AddSingleton<IMessageBus, AzServiceBusMessageBus>();
 
             services.AddHttpClient<IEventCatalogService, EventCatalogService>(c =>
                 c.BaseAddress = new Uri(Configuration["ApiConfigs:EventCatalog:Uri"]));

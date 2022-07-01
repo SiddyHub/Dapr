@@ -16,13 +16,13 @@ namespace GloboTicket.Services.EventCatalog.Controllers
     {
         private readonly IEventRepository eventRepository;
         private readonly IMapper mapper;
-        private readonly IMessageBus messageBus;
+        //private readonly IMessageBus messageBus;
 
-        public EventController(IEventRepository eventRepository, IMapper mapper, IMessageBus messageBus)
+        public EventController(IEventRepository eventRepository, IMapper mapper)//, IMessageBus messageBus)
         {
             this.eventRepository = eventRepository;
             this.mapper = mapper;
-            this.messageBus = messageBus;
+            //this.messageBus = messageBus;
         }
 
         [HttpGet]
@@ -55,15 +55,15 @@ namespace GloboTicket.Services.EventCatalog.Controllers
                 Price = priceUpdate.Price
             };
 
-            try
-            {
-                await messageBus.PublishMessage(priceUpdatedMessage, "priceupdatedmessage");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            //try
+            //{
+            //    await messageBus.PublishMessage(priceUpdatedMessage, "priceupdatedmessage");
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine(e);
+            //    throw;
+            //}
 
 
             return Ok(priceUpdate);

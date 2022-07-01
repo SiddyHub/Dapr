@@ -27,7 +27,7 @@ namespace GloboTicket.Services.Marketing
         {
             services.AddControllers();
 
-            services.AddHostedService<TimedBasketChangeEventService>();
+            //services.AddHostedService<TimedBasketChangeEventService>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

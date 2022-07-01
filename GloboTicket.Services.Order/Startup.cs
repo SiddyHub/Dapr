@@ -42,14 +42,14 @@ namespace GloboTicket.Services.Ordering
 
             services.AddSingleton(new OrderRepository(optionsBuilder.Options));
 
-            services.AddSingleton<IMessageBus, AzServiceBusMessageBus>();
+            //services.AddSingleton<IMessageBus, AzServiceBusMessageBus>();
 
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Ordering API", Version = "v1" });
             });
 
-            services.AddSingleton<IAzServiceBusConsumer, AzServiceBusConsumer>();
+            //services.AddSingleton<IAzServiceBusConsumer, AzServiceBusConsumer>();
 
             services.AddControllers();
         }
@@ -83,7 +83,7 @@ namespace GloboTicket.Services.Ordering
                 endpoints.MapControllers();
             });
 
-            app.UseAzServiceBusConsumer();
+            //app.UseAzServiceBusConsumer();
 
 
         }

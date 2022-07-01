@@ -21,14 +21,14 @@ namespace GloboTicket.Services.ShoppingBasket.Controllers
     {
         private readonly IBasketRepository basketRepository;
         private readonly IMapper mapper;
-        private readonly IMessageBus messageBus;
+        //private readonly IMessageBus messageBus;
         private readonly IDiscountService discountService;
 
-        public BasketsController(IBasketRepository basketRepository, IMapper mapper, IMessageBus messageBus, IDiscountService discountService)
+        public BasketsController(IBasketRepository basketRepository, IMapper mapper, IDiscountService discountService) //, IMessageBus messageBus
         {
             this.basketRepository = basketRepository;
             this.mapper = mapper;
-            this.messageBus = messageBus;
+            //this.messageBus = messageBus;
             this.discountService = discountService;
         }
 
@@ -132,15 +132,15 @@ namespace GloboTicket.Services.ShoppingBasket.Controllers
                     basketCheckoutMessage.BasketTotal = total;
                 }
 
-                try
-                {
-                    await messageBus.PublishMessage(basketCheckoutMessage, "checkoutmessage");
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                    throw;
-                }
+                //try
+                //{
+                //    await messageBus.PublishMessage(basketCheckoutMessage, "checkoutmessage");
+                //}
+                //catch (Exception e)
+                //{
+                //    Console.WriteLine(e);
+                //    throw;
+                //}
 
                 await basketRepository.ClearBasket(basketCheckout.BasketId);
                 return Accepted(basketCheckoutMessage);
