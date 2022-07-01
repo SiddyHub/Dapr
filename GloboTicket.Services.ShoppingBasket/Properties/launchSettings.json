@@ -15,7 +15,14 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:5002"
+      "applicationUrl": "http://localhost:5002"
+    },
+    "dapr-self-hosted": {
+        "commandName": "Executable",
+        "executablePath": "C:\\dapr\\dapr.exe",
+        "commandLineArgs": "run --app-id shoppingbasket --app-port 5002 --dapr-http-port 3502 --app-protocol http dotnet run",
+        "workingDirectory": "C:\\Users\\simeh\\source\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\GloboTicket\\GloboTicket.Services.ShoppingBasket",
+        "nativeDebugging": true
     }
   }
 }

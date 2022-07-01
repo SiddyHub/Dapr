@@ -184,6 +184,14 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Dapr.AspNetCore": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "Dapr.Client": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
             "Microsoft.Azure.ServiceBus": {
               "target": "Package",
               "version": "[4.1.4, )"

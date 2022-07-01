@@ -1,3 +1,4 @@
+using Dapr.Client;
 using GloboTicket.Web.Models;
 using GloboTicket.Web.Services;
 using Microsoft.AspNetCore.Builder;
@@ -6,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using System.Text.Json;
 
 namespace GloboTicket.Web
 {
@@ -27,14 +29,28 @@ namespace GloboTicket.Web
             if (environment.IsDevelopment())
                 builder.AddRazorRuntimeCompilation();
 
-            services.AddHttpClient<IEventCatalogService, EventCatalogService>(c => 
-                c.BaseAddress = new Uri(config["ApiConfigs:EventCatalog:Uri"]));
-            services.AddHttpClient<IShoppingBasketService, ShoppingBasketService>(c => 
-                c.BaseAddress = new Uri(config["ApiConfigs:ShoppingBasket:Uri"]));
+            services.AddDaprClient();
+
+            services.AddSingleton(new JsonSerializerOptions()
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                PropertyNameCaseInsensitive = true,
+            });
+
+            services.AddSingleton<IEventCatalogService>(c =>
+                new EventCatalogService(DaprClient.CreateInvokeHttpClient("catalog")));
+
+            services.AddScoped<IShoppingBasketService, ShoppingBasketDaprService>();
+            services.AddScoped<IDiscountService, DiscountDaprService>();
+
+            //services.AddHttpClient<IEventCatalogService, EventCatalogService>(c => 
+            //    c.BaseAddress = new Uri(config["ApiConfigs:EventCatalog:Uri"]));
+            //services.AddHttpClient<IShoppingBasketService, ShoppingBasketService>(c => 
+            //    c.BaseAddress = new Uri(config["ApiConfigs:ShoppingBasket:Uri"]));
             services.AddHttpClient<IOrderService, OrderService>(c =>
                 c.BaseAddress = new Uri(config["ApiConfigs:Order:Uri"]));
-            services.AddHttpClient<IDiscountService, DiscountService>(c =>
-                c.BaseAddress = new Uri(config["ApiConfigs:Discount:Uri"]));
+            //services.AddHttpClient<IDiscountService, DiscountService>(c =>
+            //    c.BaseAddress = new Uri(config["ApiConfigs:Discount:Uri"]));
 
             services.AddSingleton<Settings>();
         }
@@ -51,7 +67,7 @@ namespace GloboTicket.Web
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();

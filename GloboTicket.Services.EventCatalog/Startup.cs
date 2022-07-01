@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
+using System.Text.Json;
 
 namespace GloboTicket.Services.EventCatalog
 {
@@ -35,7 +36,14 @@ namespace GloboTicket.Services.EventCatalog
             //services.AddSingleton<IMessageBus, AzServiceBusMessageBus>();
 
 
-            services.AddControllers();
+            services.AddControllers().AddDapr(builder =>
+                builder.UseJsonSerializationOptions(
+                    new JsonSerializerOptions()
+                    {
+                        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                        PropertyNameCaseInsensitive = true,
+                    }));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EventDto Catalog API", Version = "v1" });
@@ -49,7 +57,7 @@ namespace GloboTicket.Services.EventCatalog
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseSwagger();
 

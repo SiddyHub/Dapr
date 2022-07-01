@@ -79,3 +79,13 @@ C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\d
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.EventCatalog\obj\Debug\netcoreapp3.1\GloboTicket.Services.EventCatalog.dll
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.EventCatalog\obj\Debug\netcoreapp3.1\GloboTicket.Services.EventCatalog.pdb
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.EventCatalog\obj\Debug\netcoreapp3.1\GloboTicket.Services.EventCatalog.genruntimeconfig.cache
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.EventCatalog\bin\Debug\netcoreapp3.1\Dapr.AspNetCore.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.EventCatalog\bin\Debug\netcoreapp3.1\Dapr.Client.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.EventCatalog\bin\Debug\netcoreapp3.1\Google.Api.CommonProtos.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.EventCatalog\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.EventCatalog\bin\Debug\netcoreapp3.1\Grpc.Core.Api.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.EventCatalog\bin\Debug\netcoreapp3.1\Grpc.Net.Client.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.EventCatalog\bin\Debug\netcoreapp3.1\Grpc.Net.Common.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.EventCatalog\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.EventCatalog\bin\Debug\netcoreapp3.1\System.Net.Http.Json.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.EventCatalog\bin\Debug\netcoreapp3.1\System.Text.Json.dll

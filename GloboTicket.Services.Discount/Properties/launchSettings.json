@@ -15,7 +15,14 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:5007"
-    }
+      "applicationUrl": "http://localhost:5007"
+    },
+    "dapr-self-hosted": {
+        "commandName": "Executable",
+        "executablePath": "C:\\dapr\\dapr.exe",
+        "commandLineArgs": "run --app-id discountgrpc --app-port 5007 --dapr-http-port 3507 --dapr-grpc-port 50020 --app-protocol grpc --app-protocol http dotnet run",
+        "workingDirectory": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Services.Discount",
+        "nativeDebugging": true
+    } 
   }
 }
