@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = GloboTicket.Services.Discount
+build_property.ProjectDir = C:\Users\simeh\source\repos\Practice\Microservice-to_dapr\toDapr\microservices_core\04\demos\Integration Events\GloboTicket.Services.Discount\
