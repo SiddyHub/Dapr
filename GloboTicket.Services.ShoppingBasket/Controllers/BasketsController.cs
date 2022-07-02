@@ -117,11 +117,11 @@ namespace GloboTicket.Services.ShoppingBasket.Controllers
                 //apply discount by talking to the discount service
                 Coupon coupon = null;
 
-                //if (basket.CouponId.HasValue)
-                //    coupon = await discountService.GetCoupon(basket.CouponId.Value);
-
                 if (basket.CouponId.HasValue)
-                    coupon = await discountService.GetCouponWithError(basket.CouponId.Value);
+                    coupon = await discountService.GetCoupon(basket.CouponId.Value);
+
+                //if (basket.CouponId.HasValue)
+                //    coupon = await discountService.GetCouponWithError(basket.CouponId.Value);
 
                 if (coupon != null)
                 {

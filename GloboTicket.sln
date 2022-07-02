@@ -27,9 +27,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GloboTicket.Integration.Mes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GloboTicket.Integration.Messages", "GloboTicket.Integration.Messages\GloboTicket.Integration.Messages.csproj", "{A6997021-8A1B-4727-9E5C-3EC1DB783BFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "External.PaymentGateway", "External.PaymentGateway\External.PaymentGateway.csproj", "{08E68C56-A116-430C-A5C3-78797B49C726}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "External.PaymentGateway", "External.PaymentGateway\External.PaymentGateway.csproj", "{08E68C56-A116-430C-A5C3-78797B49C726}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboTicket.Services.Payment", "GloboTicket.Services.Payment\GloboTicket.Services.Payment.csproj", "{71D77F9F-0A21-4054-BB7C-A9C75062B202}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GloboTicket.Services.Payment", "GloboTicket.Services.Payment\GloboTicket.Services.Payment.csproj", "{71D77F9F-0A21-4054-BB7C-A9C75062B202}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9C3D9C71-CE49-41B8-93F4-266467ED908C}"
+	ProjectSection(SolutionItems) = preProject
+		tye.yaml = tye.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

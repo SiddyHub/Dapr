@@ -1,0 +1,24 @@
+name: globo-storeapp
+extensions:
+  # Configuration for dapr goes here.
+- name: dapr
+  #components-path: <components-path> 
+
+# Services to run go here.
+services:
+  
+  # The name will be used as the app-id. For a .NET project, Tye only needs the path to the project file.
+- name: frontend
+  project: GloboTicket.Client/GloboTicket.Web.csproj
+- name: catalog
+  project: GloboTicket.Services.EventCatalog/GloboTicket.Services.EventCatalog.csproj
+- name: shoppingbasket
+  project: GloboTicket.Services.ShoppingBasket/GloboTicket.Services.ShoppingBasket.csproj
+- name: discountgrpc
+  project: GloboTicket.Services.Discount/GloboTicket.Services.Discount.csproj
+
+  # Containers you want to run need an image name and set of ports to expose.
+#- name: redis
+#  image: redis
+#  bindings:
+#    - port: 6973
