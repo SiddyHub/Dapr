@@ -1,0 +1,169 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+            "label": "build-frontend",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/GloboTicket.Client/GloboTicket.Web.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+		{
+            "label": "build-catalog",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/GloboTicket.Services.EventCatalog/GloboTicket.Services.EventCatalog.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+		{
+            "label": "build-shoppingbasket",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/GloboTicket.Services.ShoppingBasket/GloboTicket.Services.ShoppingBasket.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+		{
+            "label": "build-discount",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/GloboTicket.Services.Discount/GloboTicket.Services.Discount.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+		{
+			"appId": "frontend",
+			"appPort": 5000,
+            "httpPort": 3500,
+			"grpcPort": 35000,
+            "metricsPort": 9090,
+			"label": "daprd-debug-frontend",
+			"type": "daprd",
+            "problemMatcher": {
+                "pattern": [
+                    {
+                      "regexp": ".",
+                      "file": 1,
+                      "location": 2,
+                      "message": 3
+                    }
+                ],
+                "background": {
+                    "beginsPattern": "^.*starting Dapr Runtime.*",
+                    "endsPattern": "^.*waiting on port.*"
+                }
+            },
+			"dependsOn": "build-frontend"
+		},
+		{
+			"appId": "frontend",
+			"label": "daprd-down-frontend",
+			"type": "daprd-down"
+		},
+		{
+			"appId": "catalog",
+			"appPort": 5001,
+            "httpPort": 3501,
+			"grpcPort": 50001,
+            "metricsPort": 9091,
+			"label": "daprd-debug-catalog",
+			"type": "daprd",
+            "problemMatcher": {
+                "pattern": [
+                    {
+                      "regexp": ".",
+                      "file": 1,
+                      "location": 2,
+                      "message": 3
+                    }
+                ],
+                "background": {
+                    "beginsPattern": "^.*starting Dapr Runtime.*",
+                    "endsPattern": "^.*waiting on port.*"
+                }
+            },
+			"dependsOn": "build-catalog"
+		},
+		{
+			"appId": "catalog",
+			"label": "daprd-down-catalog",
+			"type": "daprd-down"
+		},		
+		{
+			"appId": "shoppingbasket",
+			"appPort": 5002,
+            "httpPort": 3502,
+			"grpcPort": 50002,
+            "metricsPort": 9092,
+			"label": "daprd-debug-shoppingbasket",
+			"type": "daprd",
+            "problemMatcher": {
+                "pattern": [
+                    {
+                      "regexp": ".",
+                      "file": 1,
+                      "location": 2,
+                      "message": 3
+                    }
+                ],
+                "background": {
+                    "beginsPattern": "^.*starting Dapr Runtime.*",
+                    "endsPattern": "^.*waiting on port.*"
+                }
+            },
+			"dependsOn": "build-shoppingbasket"
+		},
+		{
+			"appId": "shoppingbasket",
+			"label": "daprd-down-shoppingbasket",
+			"type": "daprd-down"
+		},
+		{
+			"appId": "discountgrpc",
+			"appPort": 5007,
+            "httpPort": 3507,
+			"grpcPort": 50007,
+            "metricsPort": 9097,
+			"label": "daprd-debug-discountgrpc",
+			"type": "daprd",
+            "problemMatcher": {
+                "pattern": [
+                    {
+                      "regexp": ".",
+                      "file": 1,
+                      "location": 2,
+                      "message": 3
+                    }
+                ],
+                "background": {
+                    "beginsPattern": "^.*starting Dapr Runtime.*",
+                    "endsPattern": "^.*waiting on port.*"
+                }
+            },
+			"dependsOn": "build-discount"
+		},
+		{
+			"appId": "discountgrpc",
+			"label": "daprd-down-discountgrpc",
+			"type": "daprd-down"
+		}
+	]
+}
