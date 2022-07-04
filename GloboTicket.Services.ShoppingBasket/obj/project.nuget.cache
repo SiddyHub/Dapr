@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EOt0v2hiU9jUI7E2iQCKP4xHKB0+P/r9DzS6cGuc83tMNjMb7Q8G7WwICOMqXu3l7Drz+qPakQxE58yNZ5uBpg==",
+  "dgSpecHash": "6RiBjMwlhIyalJ8rZwFB6e0HMfs9A+JIx1ZhiRNT9SltW63PvJQturVMCMK/h4lwZm4YCy5qlNUnROBWkObioQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Services.ShoppingBasket\\GloboTicket.Services.ShoppingBasket.csproj",
   "expectedPackageFiles": [
@@ -9,10 +9,11 @@
     "C:\\Users\\simeh\\.nuget\\packages\\dapr.aspnetcore\\1.7.0\\dapr.aspnetcore.1.7.0.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\dapr.client\\1.7.0\\dapr.client.1.7.0.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\google.api.commonprotos\\2.2.0\\google.api.commonprotos.2.2.0.nupkg.sha512",
-    "C:\\Users\\simeh\\.nuget\\packages\\google.protobuf\\3.15.0\\google.protobuf.3.15.0.nupkg.sha512",
+    "C:\\Users\\simeh\\.nuget\\packages\\google.protobuf\\3.21.2\\google.protobuf.3.21.2.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\grpc.core.api\\2.32.0\\grpc.core.api.2.32.0.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\grpc.net.client\\2.32.0\\grpc.net.client.2.32.0.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\grpc.net.common\\2.32.0\\grpc.net.common.2.32.0.nupkg.sha512",
+    "C:\\Users\\simeh\\.nuget\\packages\\grpc.tools\\2.32.0\\grpc.tools.2.32.0.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\microsoft.azure.amqp\\2.4.5\\microsoft.azure.amqp.2.4.5.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\microsoft.azure.servicebus\\4.1.4\\microsoft.azure.servicebus.4.1.4.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\microsoft.azure.services.appauthentication\\1.0.3\\microsoft.azure.services.appauthentication.1.0.3.nupkg.sha512",

@@ -36,6 +36,9 @@
           "Dapr.Client": "1.7.0",
           "GloboTicket.Integration.Messages": "1.0.0",
           "GloboTicket.Integration.MessagingBus": "1.0.0",
+          "Google.Protobuf": "3.21.2",
+          "Grpc.Net.Client": "2.32.0",
+          "Grpc.Tools": "2.32.0",
           "Microsoft.Azure.ServiceBus": "4.1.4",
           "Microsoft.EntityFrameworkCore.Design": "3.1.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.5",
@@ -364,7 +367,7 @@
       "Dapr.Client/1.7.0": {
         "dependencies": {
           "Google.Api.CommonProtos": "2.2.0",
-          "Google.Protobuf": "3.15.0",
+          "Google.Protobuf": "3.21.2",
           "Grpc.Net.Client": "2.32.0",
           "System.Net.Http.Json": "5.0.0"
         },
@@ -380,7 +383,7 @@
       },
       "Google.Api.CommonProtos/2.2.0": {
         "dependencies": {
-          "Google.Protobuf": "3.15.0"
+          "Google.Protobuf": "3.21.2"
         },
         "runtime": {
           "lib/netstandard2.0/Google.Api.CommonProtos.dll": {
@@ -392,15 +395,15 @@
           "lib/netstandard2.0/Google.Api.CommonProtos.dll": {}
         }
       },
-      "Google.Protobuf/3.15.0": {
+      "Google.Protobuf/3.21.2": {
         "dependencies": {
           "System.Memory": "4.5.3",
           "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "runtime": {
           "lib/netstandard2.0/Google.Protobuf.dll": {
-            "assemblyVersion": "3.15.0.0",
-            "fileVersion": "3.15.0.0"
+            "assemblyVersion": "3.21.2.0",
+            "fileVersion": "3.21.2.0"
           }
         },
         "compile": {
@@ -451,6 +454,7 @@
           "lib/netstandard2.1/Grpc.Net.Common.dll": {}
         }
       },
+      "Grpc.Tools/2.32.0": {},
       "Microsoft.Azure.Amqp/2.4.5": {
         "dependencies": {
           "System.Net.WebSockets.Client": "4.0.2",
@@ -3805,12 +3809,12 @@
       "path": "google.api.commonprotos/2.2.0",
       "hashPath": "google.api.commonprotos.2.2.0.nupkg.sha512"
     },
-    "Google.Protobuf/3.15.0": {
+    "Google.Protobuf/3.21.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2na7LsYrtxkEQaVCNjaafBzVu4IJ4U4+dwwBazK8oUkpDiIFjO0GkyTc+IbStx4xNVAV4EqHl+qp2uegFgFiiA==",
-      "path": "google.protobuf/3.15.0",
-      "hashPath": "google.protobuf.3.15.0.nupkg.sha512"
+      "sha512": "sha512-91vdjMcbesfibUtE2n6bVWelT+7J7hExMb9WAEQXuM748+aoIrrUECkIBCmQG+RiM4KvEccVgutFdzl1l6G+Rw==",
+      "path": "google.protobuf/3.21.2",
+      "hashPath": "google.protobuf.3.21.2.nupkg.sha512"
     },
     "Grpc.Core.Api/2.32.0": {
       "type": "package",
@@ -3832,6 +3836,13 @@
       "sha512": "sha512-vDsgy6fs+DlsylppjK9FBGTMMUe8vfAmaURV7ZTurM27itr8qBwymgqmwnVB2hcP1q35NqKx2NvPGe5S2IEnDw==",
       "path": "grpc.net.common/2.32.0",
       "hashPath": "grpc.net.common.2.32.0.nupkg.sha512"
+    },
+    "Grpc.Tools/2.32.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-phODsWXk5K0fnCxPA5r2sINMUusNnWnceFExqVI1CR2HhkdzECZjKMYtzUZRktNl1zUkBON0kR/JHK7xcBw0gA==",
+      "path": "grpc.tools/2.32.0",
+      "hashPath": "grpc.tools.2.32.0.nupkg.sha512"
     },
     "Microsoft.Azure.Amqp/2.4.5": {
       "type": "package",

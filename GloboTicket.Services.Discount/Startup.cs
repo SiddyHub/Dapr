@@ -1,6 +1,7 @@
 using AutoMapper;
 using GloboTicket.Services.Discount.DbContexts;
 using GloboTicket.Services.Discount.Repositories;
+using GloboTicket.Services.Discount.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -39,6 +40,10 @@ namespace GloboTicket.Services.Discount
                         PropertyNameCaseInsensitive = true,
                     }));
 
+            services.AddDaprClient();
+
+            services.AddGrpc();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Discount API", Version = "v1" });
@@ -52,7 +57,7 @@ namespace GloboTicket.Services.Discount
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
 
             app.UseSwagger();
 
@@ -68,6 +73,7 @@ namespace GloboTicket.Services.Discount
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapGrpcService<AppCallbackService>();
                 endpoints.MapControllers();
             });
         }

@@ -142,6 +142,8 @@
             "httpPort": 3507,
 			"grpcPort": 50007,
             "metricsPort": 9097,
+            "appSsl": true,
+            "appProtocol": "grpc",
 			"label": "daprd-debug-discountgrpc",
 			"type": "daprd",
             "problemMatcher": {

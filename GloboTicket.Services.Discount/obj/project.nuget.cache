@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "he8TCUdqLHDPKvFq9l0J4Cg0LOzC24xhsLkrhKZ5out+PKbUBmQSfbK3mQzOMMQ55p4gvxc+OPtEPDAF6zh2Dg==",
+  "dgSpecHash": "aBzEqMwULLWWRGwR/6Ko9Mv8DZVZRKrIXyxTTzYX9N+WWCwAnUTJhuptzS4BMxYM/ddWa7w1Wz7HPi7jIT+mVQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Services.Discount\\GloboTicket.Services.Discount.csproj",
   "expectedPackageFiles": [
@@ -10,9 +10,14 @@
     "C:\\Users\\simeh\\.nuget\\packages\\dapr.client\\1.7.0\\dapr.client.1.7.0.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\google.api.commonprotos\\2.2.0\\google.api.commonprotos.2.2.0.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\google.protobuf\\3.15.0\\google.protobuf.3.15.0.nupkg.sha512",
+    "C:\\Users\\simeh\\.nuget\\packages\\grpc.aspnetcore\\2.32.0\\grpc.aspnetcore.2.32.0.nupkg.sha512",
+    "C:\\Users\\simeh\\.nuget\\packages\\grpc.aspnetcore.server\\2.32.0\\grpc.aspnetcore.server.2.32.0.nupkg.sha512",
+    "C:\\Users\\simeh\\.nuget\\packages\\grpc.aspnetcore.server.clientfactory\\2.32.0\\grpc.aspnetcore.server.clientfactory.2.32.0.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\grpc.core.api\\2.32.0\\grpc.core.api.2.32.0.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\grpc.net.client\\2.32.0\\grpc.net.client.2.32.0.nupkg.sha512",
+    "C:\\Users\\simeh\\.nuget\\packages\\grpc.net.clientfactory\\2.32.0\\grpc.net.clientfactory.2.32.0.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\grpc.net.common\\2.32.0\\grpc.net.common.2.32.0.nupkg.sha512",
+    "C:\\Users\\simeh\\.nuget\\packages\\grpc.tools\\2.32.0\\grpc.tools.2.32.0.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\simeh\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
