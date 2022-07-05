@@ -12,6 +12,7 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Polly.CircuitBreaker;
+using Dapr.Client;
 
 namespace GloboTicket.Services.ShoppingBasket.Controllers
 {
@@ -23,13 +24,15 @@ namespace GloboTicket.Services.ShoppingBasket.Controllers
         private readonly IMapper mapper;
         //private readonly IMessageBus messageBus;
         private readonly IDiscountService discountService;
+        private readonly DaprClient daprClient;
 
-        public BasketsController(IBasketRepository basketRepository, IMapper mapper, IDiscountService discountService) //, IMessageBus messageBus
+        public BasketsController(IBasketRepository basketRepository, IMapper mapper, IDiscountService discountService, Dapr.Client.DaprClient daprClient) //, IMessageBus messageBus
         {
             this.basketRepository = basketRepository;
             this.mapper = mapper;
             //this.messageBus = messageBus;
             this.discountService = discountService;
+            this.daprClient = daprClient ?? throw new ArgumentNullException(nameof(daprClient));
         }
 
         [HttpGet("{basketId}", Name = "GetBasket")]
@@ -115,10 +118,21 @@ namespace GloboTicket.Services.ShoppingBasket.Controllers
                 }
 
                 //apply discount by talking to the discount service
-                Coupon coupon = null;
+                Coupon coupon = new Coupon();
 
-                if (basket.CouponId.HasValue)
-                    coupon = await discountService.GetCoupon(basket.CouponId.Value);
+                if (basket.CouponId.HasValue) 
+                {
+                    //coupon = await discountService.GetCoupon(basket.CouponId.Value);
+                    var data = new GloboTicket.Grpc.GetCouponByIdRequest { CouponId = basket.CouponId.Value.ToString() };
+                    var result = await daprClient.InvokeMethodGrpcAsync<GloboTicket.Grpc.GetCouponByIdRequest, GloboTicket.Grpc.Coupon>("discountgrpc", "GetCouponById", data);
+                    if (result != null)
+                    {
+                        coupon.AlreadyUsed = result.AlreadyUsed;
+                        coupon.Amount = result.Amount;
+                        coupon.Code = result.Code;
+                        coupon.CouponId = Guid.Parse(result.CouponId);
+                    }
+                }                    
 
                 //if (basket.CouponId.HasValue)
                 //    coupon = await discountService.GetCouponWithError(basket.CouponId.Value);

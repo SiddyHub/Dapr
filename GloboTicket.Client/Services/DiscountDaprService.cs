@@ -22,19 +22,46 @@ namespace GloboTicket.Web.Services
             if (code == string.Empty)
                 return null;
 
-            var response = await daprClient.InvokeMethodAsync<Coupon>(HttpMethod.Get, "discountgrpc", $"/api/discount/code/{code}");                        
-            return response;
+            //var response = await daprClient.InvokeMethodAsync<Coupon>(HttpMethod.Get, "discountgrpc", $"/api/discount/code/{code}");                        
+            //return response;
+
+            var coupon = new Coupon();
+            var data = new GloboTicket.Grpc.GetCouponByIdRequest { CouponId = code };
+            var result = await daprClient.InvokeMethodGrpcAsync<GloboTicket.Grpc.GetCouponByIdRequest, GloboTicket.Grpc.Coupon>("discountgrpc", "GetCouponByCode", data);
+            if (result != null)
+            {
+                coupon.AlreadyUsed = result.AlreadyUsed;
+                coupon.Amount = result.Amount;
+                coupon.Code = result.Code;
+                coupon.CouponId = Guid.Parse(result.CouponId);
+            }
+            return coupon;
         }
 
         public async Task<Coupon> GetCouponById(Guid couponId)
         {
-            var response = await daprClient.InvokeMethodAsync<Coupon>(HttpMethod.Get, "discountgrpc", $"/api/discount/{couponId}");
-            return response;
+            //var response = await daprClient.InvokeMethodAsync<Coupon>(HttpMethod.Get, "discountgrpc", $"/api/discount/{couponId}");
+            //return response;
+
+            var coupon = new Coupon();
+            var data = new GloboTicket.Grpc.GetCouponByIdRequest { CouponId = couponId.ToString() };
+            var result = await daprClient.InvokeMethodGrpcAsync<GloboTicket.Grpc.GetCouponByIdRequest, GloboTicket.Grpc.Coupon>("discountgrpc", "GetCouponById", data);
+            if (result != null)
+            {
+                coupon.AlreadyUsed = result.AlreadyUsed;
+                coupon.Amount = result.Amount;
+                coupon.Code = result.Code;
+                coupon.CouponId = Guid.Parse(result.CouponId);
+            }
+            return coupon;
         }
 
         public async Task UseCoupon(Guid couponId)
         {
-            await daprClient.InvokeMethodAsync(HttpMethod.Put, "discountgrpc", $"/api/discount/use/{couponId}", couponId);            
+            //await daprClient.InvokeMethodAsync(HttpMethod.Put, "discountgrpc", $"/api/discount/use/{couponId}", couponId);
+
+            var data = new GloboTicket.Grpc.GetCouponByIdRequest { CouponId = couponId.ToString() };
+            await daprClient.InvokeMethodGrpcAsync<GloboTicket.Grpc.GetCouponByIdRequest>("discountgrpc", "UseCoupon", data);
         }
     }
 }

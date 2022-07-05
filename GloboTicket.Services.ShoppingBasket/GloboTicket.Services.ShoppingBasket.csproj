@@ -9,6 +9,12 @@
 		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
 		<PackageReference Include="Dapr.AspNetCore" Version="1.7.0" />
 		<PackageReference Include="Dapr.Client" Version="1.7.0" />
+		<PackageReference Include="Google.Protobuf" Version="3.21.2" />
+		<PackageReference Include="Grpc.Net.Client" Version="2.32.0" />
+		<PackageReference Include="Grpc.Tools" Version="2.32.0">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.5">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -27,6 +33,12 @@
 	<ItemGroup>
 		<ProjectReference Include="..\GloboTicket.Integration.Messages\GloboTicket.Integration.Messages.csproj" />
 		<ProjectReference Include="..\GloboTicket.Integration.MessagingBus\GloboTicket.Integration.MessagingBus.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Protobuf Include="..\discount.proto" GrpcServices="Client">
+	    <Link>Protos\discount.proto</Link>
+	  </Protobuf>
 	</ItemGroup>
 
 
