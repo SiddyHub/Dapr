@@ -108,13 +108,32 @@
                 "/Views": "${workspaceFolder}/Views"
             },
             "postDebugTask": "daprd-down-discountgrpc"
+        },
+        {
+            "name": ".NET Core Launch order with Dapr",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "daprd-debug-order",
+            "program": "${workspaceFolder}/GloboTicket.Services.Order/bin/Debug/netcoreapp3.1/GloboTicket.Services.Ordering.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/GloboTicket.Services.Order",
+            "stopAtEntry": false,            
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://+:5005",
+                "DAPR_HTTP_PORT": "3505"               
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            },
+            "postDebugTask": "daprd-down-order"
         }
     ],
     "compounds":
    [
      {
        "name": "Front+Catalog+ShoppingBasket+Discount w/Dapr",
-       "configurations": [".NET Core Launch frontend with Dapr",".NET Core Launch catalog with Dapr",".NET Core Launch shoppingbasket with Dapr",".NET Core Launch discountgrpc with Dapr"]
+       "configurations": [".NET Core Launch frontend with Dapr",".NET Core Launch catalog with Dapr",".NET Core Launch shoppingbasket with Dapr",".NET Core Launch discountgrpc with Dapr",".NET Core Launch order with Dapr"]
      }
    ]
 }

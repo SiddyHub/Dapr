@@ -146,15 +146,16 @@ namespace GloboTicket.Services.ShoppingBasket.Controllers
                     basketCheckoutMessage.BasketTotal = total;
                 }
 
-                //try
-                //{
-                //    await messageBus.PublishMessage(basketCheckoutMessage, "checkoutmessage");
-                //}
-                //catch (Exception e)
-                //{
-                //    Console.WriteLine(e);
-                //    throw;
-                //}
+                try
+                {
+                    //await messageBus.PublishMessage(basketCheckoutMessage, "checkoutmessage");
+                    await daprClient.PublishEventAsync("pubsub", "checkoutmessage", basketCheckoutMessage);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
 
                 await basketRepository.ClearBasket(basketCheckout.BasketId);
                 return Accepted(basketCheckoutMessage);
