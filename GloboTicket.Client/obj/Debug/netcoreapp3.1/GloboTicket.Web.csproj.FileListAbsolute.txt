@@ -50,7 +50,6 @@ C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\d
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Client\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Client\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Client\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Client\obj\Debug\netcoreapp3.1\GloboTicket.Web.csproj.AssemblyReference.cache
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Client\obj\Debug\netcoreapp3.1\GloboTicket.Web.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Client\obj\Debug\netcoreapp3.1\GloboTicket.Web.AssemblyInfoInputs.cache
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Client\obj\Debug\netcoreapp3.1\GloboTicket.Web.AssemblyInfo.cs
@@ -370,3 +369,4 @@ C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\d
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Client\bin\Debug\netcoreapp3.1\refs\System.Xml.XPath.XDocument.dll
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Client\bin\Debug\netcoreapp3.1\refs\WindowsBase.dll
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Client\bin\Debug\netcoreapp3.1\GloboTicket.Web.Views.pdb
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Client\obj\Debug\netcoreapp3.1\GloboTicket.Web.csproj.AssemblyReference.cache
