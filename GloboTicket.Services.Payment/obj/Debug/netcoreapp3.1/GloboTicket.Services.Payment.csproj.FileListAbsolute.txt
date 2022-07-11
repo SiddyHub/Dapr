@@ -6,6 +6,13 @@ C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\d
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\GloboTicket.Services.Payment.runtimeconfig.dev.json
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\GloboTicket.Services.Payment.dll
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\GloboTicket.Services.Payment.pdb
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\Dapr.AspNetCore.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\Dapr.Client.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\Google.Api.CommonProtos.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\Grpc.Core.Api.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\Grpc.Net.Client.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\Grpc.Net.Common.dll
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\Microsoft.Azure.Amqp.dll
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\Microsoft.Azure.ServiceBus.dll
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\Microsoft.Azure.Services.AppAuthentication.dll
@@ -41,6 +48,9 @@ C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\d
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\System.Net.Http.Json.dll
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\System.Text.Json.dll
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\GloboTicket.Integration.Messages.dll
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\GloboTicket.Integration.MessagingBus.dll
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\bin\Debug\netcoreapp3.1\GloboTicket.Integration.MessagingBus.pdb
@@ -50,6 +60,7 @@ C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\d
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\obj\Debug\netcoreapp3.1\GloboTicket.Services.Payment.AssemblyInfoInputs.cache
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\obj\Debug\netcoreapp3.1\GloboTicket.Services.Payment.AssemblyInfo.cs
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\obj\Debug\netcoreapp3.1\GloboTicket.Services.Payment.csproj.CoreCompileInputs.cache
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\obj\Debug\netcoreapp3.1\GloboTicket.Services.Payment.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\obj\Debug\netcoreapp3.1\GloboTicket.Services.Payment.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\obj\Debug\netcoreapp3.1\staticwebassets\GloboTicket.Services.Payment.StaticWebAssets.Manifest.cache
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Payment\obj\Debug\netcoreapp3.1\staticwebassets\GloboTicket.Services.Payment.StaticWebAssets.xml

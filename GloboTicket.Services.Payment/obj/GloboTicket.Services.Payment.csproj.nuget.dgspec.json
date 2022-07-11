@@ -177,6 +177,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Dapr.AspNetCore": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
             "Microsoft.Azure.ServiceBus": {
               "target": "Package",
               "version": "[4.1.4, )"

@@ -1,21 +1,33 @@
 name: globo-storeapp
 extensions:
-  # Configuration for dapr goes here.
+   #Configuration for dapr goes here.
 - name: dapr
-  #components-path: <components-path> 
+  components-path: ./AzComponents
 
 # Services to run go here.
 services:
   
   # The name will be used as the app-id. For a .NET project, Tye only needs the path to the project file.
 - name: frontend
-  project: GloboTicket.Client/GloboTicket.Web.csproj
-- name: catalog
+  project: GloboTicket.Client/GloboTicket.Web.csproj  
+  args: run --app-id frontend --app-port 5000 --dapr-http-port 3500 --dapr-grpc-port 35000 dotnet run  
+- name: catalog  
+  args: run --app-id catalog --app-port 5001 --dapr-http-port 3501 --dapr-grpc-port 50001 dotnet run
   project: GloboTicket.Services.EventCatalog/GloboTicket.Services.EventCatalog.csproj
-- name: shoppingbasket
+- name: shoppingbasket  
+  args: run --app-id shoppingbasket --app-port 5002 --dapr-http-port 3502 --dapr-grpc-port 50002 dotnet run
   project: GloboTicket.Services.ShoppingBasket/GloboTicket.Services.ShoppingBasket.csproj
 - name: discountgrpc
+  args: run --app-id discountgrpc --app-port 5007 --dapr-http-port 3507 --dapr-grpc-port 50007 --app-ssl --app-protocol grpc dotnet run
   project: GloboTicket.Services.Discount/GloboTicket.Services.Discount.csproj
+- name: order
+  args: run --app-id order --app-port 5005 --dapr-http-port 3505 --dapr-grpc-port 50009 dotnet run
+  project: GloboTicket.Services.Order/GloboTicket.Services.Ordering.csproj
+- name: payment  
+  args: run --app-id payment --app-port 5006 --dapr-http-port 3506 --dapr-grpc-port 50006 dotnet run
+  project: GloboTicket.Services.Payment/GloboTicket.Services.Payment.csproj
+- name: externalpayment
+  project: External.PaymentGateway/External.PaymentGateway.csproj
 
   # Containers you want to run need an image name and set of ports to expose.
 #- name: redis

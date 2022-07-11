@@ -29,7 +29,7 @@ namespace GloboTicket.Services.Ordering.Controllers
             return Ok(orders);
         }
 
-        [HttpPost("", Name = "SubmitOrder")]
+        [HttpPost("submitorder")]
         [Topic("pubsub", "checkoutmessage")]
         public async Task<IActionResult> Submit(BasketCheckoutMessage basketCheckoutMessage)
         {
@@ -68,7 +68,7 @@ namespace GloboTicket.Services.Ordering.Controllers
             return Ok();
         }
 
-        [HttpPost("", Name = "UpdateOrder")]
+        [HttpPost("updateorder")]
         [Topic("pubsub", "orderpaymentupdatedmessage")]
         public async Task<IActionResult> UpdateOrder (OrderPaymentUpdateMessage orderPaymentUpdateMessage)
         {
