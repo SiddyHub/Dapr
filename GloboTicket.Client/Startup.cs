@@ -39,6 +39,8 @@ namespace GloboTicket.Web
 
             services.AddSingleton<IEventCatalogService>(c =>
                 new EventCatalogService(DaprClient.CreateInvokeHttpClient("catalog")));
+            services.AddSingleton<IOrderService>(c =>
+                new OrderService(DaprClient.CreateInvokeHttpClient("order")));
 
             services.AddScoped<IShoppingBasketService, ShoppingBasketDaprService>();
             services.AddScoped<IDiscountService, DiscountDaprService>();
@@ -47,8 +49,8 @@ namespace GloboTicket.Web
             //    c.BaseAddress = new Uri(config["ApiConfigs:EventCatalog:Uri"]));
             //services.AddHttpClient<IShoppingBasketService, ShoppingBasketService>(c => 
             //    c.BaseAddress = new Uri(config["ApiConfigs:ShoppingBasket:Uri"]));
-            services.AddHttpClient<IOrderService, OrderService>(c =>
-                c.BaseAddress = new Uri(config["ApiConfigs:Order:Uri"]));
+            //services.AddHttpClient<IOrderService, OrderService>(c =>
+            //    c.BaseAddress = new Uri(config["ApiConfigs:Order:Uri"]));
             //services.AddHttpClient<IDiscountService, DiscountService>(c =>
             //    c.BaseAddress = new Uri(config["ApiConfigs:Discount:Uri"]));
 

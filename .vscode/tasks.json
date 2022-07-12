@@ -50,11 +50,49 @@
             "problemMatcher": "$msCompile"
         },
 		{
+            "label": "build-order",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/GloboTicket.Services.Order/GloboTicket.Services.Ordering.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+		{
+            "label": "build-payment",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/GloboTicket.Services.Payment/GloboTicket.Services.Payment.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+		{
+            "label": "build-externalpayment",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/External.PaymentGateway/External.PaymentGateway.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+		{
 			"appId": "frontend",
 			"appPort": 5000,
             "httpPort": 3500,
 			"grpcPort": 35000,
             "metricsPort": 9090,
+            "componentsPath": "./AzComponents",
+            "config": "./AzComponents/config.yaml",
 			"label": "daprd-debug-frontend",
 			"type": "daprd",
             "problemMatcher": {
@@ -84,6 +122,8 @@
             "httpPort": 3501,
 			"grpcPort": 50001,
             "metricsPort": 9091,
+            "componentsPath": "./AzComponents",  
+            "config": "./AzComponents/config.yaml",          
 			"label": "daprd-debug-catalog",
 			"type": "daprd",
             "problemMatcher": {
@@ -113,6 +153,8 @@
             "httpPort": 3502,
 			"grpcPort": 50002,
             "metricsPort": 9092,
+            "componentsPath": "./AzComponents",
+            "config": "./AzComponents/config.yaml",
 			"label": "daprd-debug-shoppingbasket",
 			"type": "daprd",
             "problemMatcher": {
@@ -144,6 +186,8 @@
             "metricsPort": 9097,
             "appSsl": true,
             "appProtocol": "grpc",
+            "componentsPath": "./AzComponents",
+            "config": "./AzComponents/config.yaml",
 			"label": "daprd-debug-discountgrpc",
 			"type": "daprd",
             "problemMatcher": {
@@ -165,6 +209,68 @@
 		{
 			"appId": "discountgrpc",
 			"label": "daprd-down-discountgrpc",
+			"type": "daprd-down"
+		},		
+		{
+			"appId": "order",
+			"appPort": 5005,
+            "httpPort": 3505,
+			"grpcPort": 50009,
+            "metricsPort": 9095,
+            "componentsPath": "./AzComponents",
+            "config": "./AzComponents/config.yaml",
+			"label": "daprd-debug-order",
+			"type": "daprd",
+            "problemMatcher": {
+                "pattern": [
+                    {
+                      "regexp": ".",
+                      "file": 1,
+                      "location": 2,
+                      "message": 3
+                    }
+                ],
+                "background": {
+                    "beginsPattern": "^.*starting Dapr Runtime.*",
+                    "endsPattern": "^.*waiting on port.*"
+                }
+            },
+			"dependsOn": "build-order"
+		},
+		{
+			"appId": "order",
+			"label": "daprd-down-order",
+			"type": "daprd-down"
+		},		
+		{
+			"appId": "payment",
+			"appPort": 5006,
+            "httpPort": 3506,
+			"grpcPort": 50006,
+            "metricsPort": 9096,
+            "componentsPath": "./AzComponents",
+            "config": "./AzComponents/config.yaml",
+			"label": "daprd-debug-payment",
+			"type": "daprd",
+            "problemMatcher": {
+                "pattern": [
+                    {
+                      "regexp": ".",
+                      "file": 1,
+                      "location": 2,
+                      "message": 3
+                    }
+                ],
+                "background": {
+                    "beginsPattern": "^.*starting Dapr Runtime.*",
+                    "endsPattern": "^.*waiting on port.*"
+                }
+            },
+			"dependsOn": "build-payment"
+		},
+		{
+			"appId": "payment",
+			"label": "daprd-down-payment",
 			"type": "daprd-down"
 		}
 	]

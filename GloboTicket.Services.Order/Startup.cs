@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
+using System.Text.Json;
 
 namespace GloboTicket.Services.Ordering
 {
@@ -51,7 +52,13 @@ namespace GloboTicket.Services.Ordering
 
             //services.AddSingleton<IAzServiceBusConsumer, AzServiceBusConsumer>();
 
-            services.AddControllers();
+            services.AddControllers().AddDapr(builder =>
+                builder.UseJsonSerializationOptions(
+                    new JsonSerializerOptions()
+                    {
+                        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                        PropertyNameCaseInsensitive = true,
+                    }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,10 +69,12 @@ namespace GloboTicket.Services.Ordering
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
 
             app.UseRouting();
+
+            app.UseCloudEvents();
 
             app.UseSwagger();
 
@@ -80,6 +89,7 @@ namespace GloboTicket.Services.Ordering
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapSubscribeHandler();
                 endpoints.MapControllers();
             });
 

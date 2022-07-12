@@ -1,4 +1,8 @@
-﻿using GloboTicket.Services.Ordering.Repositories;
+﻿using Dapr;
+using Dapr.Client;
+using GloboTicket.Services.Ordering.Entities;
+using GloboTicket.Services.Ordering.Messages;
+using GloboTicket.Services.Ordering.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -10,10 +14,12 @@ namespace GloboTicket.Services.Ordering.Controllers
     public class OrderController : Controller
     {
         private readonly IOrderRepository _orderRepository;
+        private readonly DaprClient daprClient;
 
-        public OrderController(IOrderRepository orderRepository)
+        public OrderController(IOrderRepository orderRepository, DaprClient daprClient)
         {
             _orderRepository = orderRepository;
+            this.daprClient = daprClient ?? throw new ArgumentNullException(nameof(daprClient));
         }
 
         [HttpGet("user/{userId}")]
@@ -21,6 +27,53 @@ namespace GloboTicket.Services.Ordering.Controllers
         {
             var orders = await _orderRepository.GetOrdersForUser(userId);
             return Ok(orders);
+        }
+
+        [HttpPost("submitorder")]
+        [Topic("pubsub", "checkoutmessage")]
+        public async Task<IActionResult> Submit(BasketCheckoutMessage basketCheckoutMessage)
+        {
+            Guid orderId = Guid.NewGuid();
+
+            Order order = new Order
+            {
+                UserId = basketCheckoutMessage.UserId,
+                Id = orderId,
+                OrderPaid = false,
+                OrderPlaced = DateTime.Now,
+                OrderTotal = basketCheckoutMessage.BasketTotal
+            };
+
+            await _orderRepository.AddOrder(order);
+
+            OrderPaymentRequestMessage orderPaymentRequestMessage = new OrderPaymentRequestMessage
+            {
+                CardExpiration = basketCheckoutMessage.CardExpiration,
+                CardName = basketCheckoutMessage.CardName,
+                CardNumber = basketCheckoutMessage.CardNumber,
+                OrderId = orderId,
+                Total = basketCheckoutMessage.BasketTotal
+            };
+
+            try
+            {
+                await daprClient.PublishEventAsync("pubsub", "orderpaymentrequestmessage", orderPaymentRequestMessage);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
+            return Ok();
+        }
+
+        [HttpPost("updateorder")]
+        [Topic("pubsub", "orderpaymentupdatedmessage")]
+        public async Task<IActionResult> UpdateOrder (OrderPaymentUpdateMessage orderPaymentUpdateMessage)
+        {
+            await _orderRepository.UpdateOrderPaymentStatus(orderPaymentUpdateMessage.OrderId, orderPaymentUpdateMessage.PaymentSuccess);
+            return Ok();
         }
     }
 }

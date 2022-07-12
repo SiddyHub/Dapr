@@ -108,13 +108,71 @@
                 "/Views": "${workspaceFolder}/Views"
             },
             "postDebugTask": "daprd-down-discountgrpc"
+        },
+        {
+            "name": ".NET Core Launch order with Dapr",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "daprd-debug-order",
+            "program": "${workspaceFolder}/GloboTicket.Services.Order/bin/Debug/netcoreapp3.1/GloboTicket.Services.Ordering.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/GloboTicket.Services.Order",
+            "stopAtEntry": false,            
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://+:5005",
+                "DAPR_HTTP_PORT": "3505"               
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            },
+            "postDebugTask": "daprd-down-order"
+        },
+        {
+            "name": ".NET Core Launch payment with Dapr",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "daprd-debug-payment",
+            "program": "${workspaceFolder}/GloboTicket.Services.Payment/bin/Debug/netcoreapp3.1/GloboTicket.Services.Payment.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/GloboTicket.Services.Payment",
+            "stopAtEntry": false,            
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://+:5006",
+                "DAPR_HTTP_PORT": "3506"                
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            },
+            "postDebugTask": "daprd-down-payment"
+        },
+        {
+            "name": ".NET Core Launch external payment",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-externalpayment",
+            "program": "${workspaceFolder}/External.PaymentGateway/bin/Debug/netcoreapp3.1/External.PaymentGateway.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,            
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "https://+:5004"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
         }
     ],
     "compounds":
    [
      {
-       "name": "Front+Catalog+ShoppingBasket+Discount w/Dapr",
-       "configurations": [".NET Core Launch frontend with Dapr",".NET Core Launch catalog with Dapr",".NET Core Launch shoppingbasket with Dapr",".NET Core Launch discountgrpc with Dapr"]
+       "name": "All Projects",
+       "configurations": [".NET Core Launch frontend with Dapr",".NET Core Launch catalog with Dapr",
+        ".NET Core Launch shoppingbasket with Dapr",".NET Core Launch discountgrpc with Dapr",
+        ".NET Core Launch order with Dapr",".NET Core Launch payment with Dapr",
+        ".NET Core Launch external payment"]
      }
    ]
 }

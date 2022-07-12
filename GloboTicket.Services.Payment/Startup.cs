@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using System.Text.Json;
 
 namespace GloboTicket.Services.Payment
 {
@@ -28,7 +29,13 @@ namespace GloboTicket.Services.Payment
 
             //services.AddSingleton<IMessageBus, AzServiceBusMessageBus>();
 
-            services.AddControllers();
+            services.AddControllers().AddDapr(builder =>
+                builder.UseJsonSerializationOptions(
+                    new JsonSerializerOptions()
+                    {
+                        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                        PropertyNameCaseInsensitive = true,
+                    }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,14 +46,17 @@ namespace GloboTicket.Services.Payment
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCloudEvents();
 
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapSubscribeHandler();
                 endpoints.MapControllers();
             });
         }
