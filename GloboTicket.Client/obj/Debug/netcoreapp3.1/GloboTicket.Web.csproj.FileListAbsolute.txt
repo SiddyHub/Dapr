@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
->>>>>>> eshop_grpc
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Client\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Client\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Client\bin\Debug\netcoreapp3.1\appsettings.Production.json
