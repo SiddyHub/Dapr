@@ -59,3 +59,4 @@ C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\d
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Marketing\obj\Debug\netcoreapp3.1\GloboTicket.Services.Marketing.dll
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Marketing\obj\Debug\netcoreapp3.1\GloboTicket.Services.Marketing.pdb
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Marketing\obj\Debug\netcoreapp3.1\GloboTicket.Services.Marketing.genruntimeconfig.cache
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Services.Marketing\obj\Debug\netcoreapp3.1\GloboTicket.Services.Marketing.csproj.AssemblyReference.cache
