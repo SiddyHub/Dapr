@@ -10,6 +10,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using AutoMapper;
 using GloboTicket.Services.Marketing.Worker;
+using System.Text.Json;
 
 namespace GloboTicket.Services.Marketing
 {
@@ -25,7 +26,13 @@ namespace GloboTicket.Services.Marketing
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddDapr(builder =>
+                builder.UseJsonSerializationOptions(
+                    new JsonSerializerOptions()
+                    {
+                        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                        PropertyNameCaseInsensitive = true,
+                    }));
 
             //services.AddHostedService<TimedBasketChangeEventService>();
 
@@ -39,8 +46,8 @@ namespace GloboTicket.Services.Marketing
 
             services.AddScoped<IBasketChangeEventRepository, BasketChangeEventRepository>();
 
-            services.AddHttpClient<IBasketChangeEventService, BasketChangeEventService>(c =>
-                c.BaseAddress = new Uri(Configuration["ApiConfigs:ShoppingBasket:Uri"]));
+            //services.AddHttpClient<IBasketChangeEventService, BasketChangeEventService>(c =>
+            //    c.BaseAddress = new Uri(Configuration["ApiConfigs:ShoppingBasket:Uri"]));
 
             services.AddDbContext<MarketingDbContext>(options =>
             {
@@ -57,7 +64,7 @@ namespace GloboTicket.Services.Marketing
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 

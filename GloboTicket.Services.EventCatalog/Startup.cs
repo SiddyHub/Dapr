@@ -31,10 +31,7 @@ namespace GloboTicket.Services.EventCatalog
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IEventRepository, EventRepository>();
 
-            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
-            //services.AddSingleton<IMessageBus, AzServiceBusMessageBus>();
-
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());            
 
             services.AddControllers().AddDapr(builder =>
                 builder.UseJsonSerializationOptions(

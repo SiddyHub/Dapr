@@ -85,6 +85,18 @@
             ],
             "problemMatcher": "$msCompile"
         },
+        {
+            "label": "build-marketing",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/GloboTicket.Services.Marketing/GloboTicket.Services.Marketing.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
 		{
 			"appId": "frontend",
 			"appPort": 5000,
@@ -271,6 +283,37 @@
 		{
 			"appId": "payment",
 			"label": "daprd-down-payment",
+			"type": "daprd-down"
+		},		
+		{
+			"appId": "marketing",
+			"appPort": 5010,
+            "httpPort": 3510,
+			"grpcPort": 50010,
+            "metricsPort": 9099,
+            "componentsPath": "./AzComponents",
+            "config": "./AzComponents/config.yaml",
+			"label": "daprd-debug-marketing",
+			"type": "daprd",
+            "problemMatcher": {
+                "pattern": [
+                    {
+                      "regexp": ".",
+                      "file": 1,
+                      "location": 2,
+                      "message": 3
+                    }
+                ],
+                "background": {
+                    "beginsPattern": "^.*starting Dapr Runtime.*",
+                    "endsPattern": "^.*waiting on port.*"
+                }
+            },
+			"dependsOn": "build-marketing"
+		},
+		{
+			"appId": "marketing",
+			"label": "daprd-down-marketing",
 			"type": "daprd-down"
 		}
 	]

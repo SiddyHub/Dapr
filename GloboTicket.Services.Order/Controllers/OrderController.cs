@@ -2,6 +2,7 @@
 using Dapr.Client;
 using GloboTicket.Services.Ordering.Entities;
 using GloboTicket.Services.Ordering.Messages;
+using GloboTicket.Services.Ordering.Messaging;
 using GloboTicket.Services.Ordering.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -15,11 +16,13 @@ namespace GloboTicket.Services.Ordering.Controllers
     {
         private readonly IOrderRepository _orderRepository;
         private readonly DaprClient daprClient;
+        private readonly EmailSender emailSender;
 
-        public OrderController(IOrderRepository orderRepository, DaprClient daprClient)
+        public OrderController(IOrderRepository orderRepository, DaprClient daprClient, EmailSender emailSender)
         {
             _orderRepository = orderRepository;
             this.daprClient = daprClient ?? throw new ArgumentNullException(nameof(daprClient));
+            this.emailSender = emailSender;
         }
 
         [HttpGet("user/{userId}")]
@@ -45,6 +48,7 @@ namespace GloboTicket.Services.Ordering.Controllers
             };
 
             await _orderRepository.AddOrder(order);
+            await emailSender.SendEmailForOrder(basketCheckoutMessage);
 
             OrderPaymentRequestMessage orderPaymentRequestMessage = new OrderPaymentRequestMessage
             {
