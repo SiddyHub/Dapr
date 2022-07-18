@@ -116,8 +116,7 @@ namespace GloboTicket.Services.ShoppingBasket.Controllers
                 Coupon coupon = new Coupon();
 
                 if (basket.CouponId.HasValue) 
-                {
-                    //coupon = await discountService.GetCoupon(basket.CouponId.Value);
+                {                    
                     var data = new GloboTicket.Grpc.GetCouponByIdRequest { CouponId = basket.CouponId.Value.ToString() };
                     var result = await daprClient.InvokeMethodGrpcAsync<GloboTicket.Grpc.GetCouponByIdRequest, GloboTicket.Grpc.Coupon>("discountgrpc", "GetCouponById", data);
                     if (result != null)
@@ -127,10 +126,7 @@ namespace GloboTicket.Services.ShoppingBasket.Controllers
                         coupon.Code = result.Code;
                         coupon.CouponId = Guid.Parse(result.CouponId);
                     }
-                }                    
-
-                //if (basket.CouponId.HasValue)
-                //    coupon = await discountService.GetCouponWithError(basket.CouponId.Value);
+                }                               
 
                 if (coupon != null)
                 {
@@ -142,8 +138,7 @@ namespace GloboTicket.Services.ShoppingBasket.Controllers
                 }
 
                 try
-                {
-                    //await messageBus.PublishMessage(basketCheckoutMessage, "checkoutmessage");
+                {                    
                     await daprClient.PublishEventAsync("pubsub", "checkoutmessage", basketCheckoutMessage);
                 }
                 catch (Exception e)

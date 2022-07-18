@@ -7,4 +7,3 @@ C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\d
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Integration.Messages\obj\Debug\netstandard2.0\GloboTicket.Integration.Messages.csproj.CoreCompileInputs.cache
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Integration.Messages\obj\Debug\netstandard2.0\GloboTicket.Integration.Messages.dll
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Integration.Messages\obj\Debug\netstandard2.0\GloboTicket.Integration.Messages.pdb
-C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\GloboTicket.Integration.Messages\obj\Debug\netstandard2.0\GloboTicket.Integration.Messages.csproj.AssemblyReference.cache
