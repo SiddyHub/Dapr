@@ -12,7 +12,7 @@
     "GloboTicket.Services.Ordering": {
       "commandName": "Project",
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:5005",
+      "applicationUrl": "http://localhost:5005",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
