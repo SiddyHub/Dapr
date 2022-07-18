@@ -1,12 +1,11 @@
 ﻿using AutoMapper;
 using Dapr.Client;
 using GloboTicket.Services.Marketing.Repositories;
-using GloboTicket.Services.Marketing.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace GloboTicket.Services.Marketing
 {
@@ -36,9 +35,10 @@ namespace GloboTicket.Services.Marketing
             int max = 10;
             var formattedDate = $"{startDate.Year}/{startDate.Month}/{startDate.Day} {startDate.Hour}:{startDate.Minute}:{startDate.Second}";
             var s = $"/api/basketevent?fromDate={formattedDate}&max={max}";
-            var response = await daprClient.InvokeMethodAsync<List<GloboTicket.Services.Marketing.Models.BasketChangeEvent>>("shoppingbasket", s);
+            var response = await daprClient.InvokeMethodAsync<List<GloboTicket.Services.Marketing.Models.BasketChangeEvent>>(HttpMethod.Get, "shoppingbasket", s);
             foreach (var basketChangeEvent in response)
             {
+                
                 await basketChangeEventRepository.AddBasketChangeEvent(mapper.Map<GloboTicket.Services.Marketing.Entities.BasketChangeEvent>(basketChangeEvent));
             }
         }
