@@ -16,6 +16,13 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "dapr-self-hosted": {
+        "commandName": "Executable",
+        "executablePath": "C:\\dapr\\dapr.exe",
+        "commandLineArgs": "run --app-id order --app-port 5005 --dapr-http-port 3505 dotnet run",
+        "workingDirectory": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Services.Order",
+        "nativeDebugging": true
     }
   }
 }

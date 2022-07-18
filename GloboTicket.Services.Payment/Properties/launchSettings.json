@@ -12,10 +12,17 @@
     "GloboTicket.Services.Payment": {
       "commandName": "Project",
       "launchBrowser": false,
-      "applicationUrl": "https://localhost:5006",
+      "applicationUrl": "http://localhost:5006",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "dapr-self-hosted": {
+        "commandName": "Executable",
+        "executablePath": "C:\\dapr\\dapr.exe",
+        "commandLineArgs": "run --app-id payment --app-port 5006 --dapr-http-port 3506 dotnet run",
+        "workingDirectory": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Services.Payment",
+        "nativeDebugging": true
     }
   }
 }

@@ -34,3 +34,4 @@ C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\d
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\External.PaymentGateway\obj\Debug\netcoreapp3.1\External.PaymentGateway.dll
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\External.PaymentGateway\obj\Debug\netcoreapp3.1\External.PaymentGateway.pdb
 C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\External.PaymentGateway\obj\Debug\netcoreapp3.1\External.PaymentGateway.genruntimeconfig.cache
+C:\Users\simeh\OneDrive - Microsoft\repos\Practice\Microservice-to_dapr\toDapr\daprized\Path-1\GloboTicketGithub\External.PaymentGateway\obj\Debug\netcoreapp3.1\External.PaymentGateway.csproj.AssemblyReference.cache
