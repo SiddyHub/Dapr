@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "E12Wrl8aMu49J6Atw/pbprtCK2ZnlFlQE/m58UcuZOFPJiJix1OSaHXPdmUa/pkOhjM/b5wpzadxeW9czQrliQ==",
+  "dgSpecHash": "gi7fAhk0JPEMdYQVi3EvtTvT43MMj+EMjGr0Z/qwTMkQLJ8YjRV9hwZhYBbve1Dg1rqFUWqoTnGu/p9np/FI9A==",
   "success": true,
   "projectFilePath": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Services.EventCatalog\\GloboTicket.Services.EventCatalog.csproj",
   "expectedPackageFiles": [

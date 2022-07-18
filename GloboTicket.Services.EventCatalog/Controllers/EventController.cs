@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using GloboTicket.Integration.MessagingBus;
 using GloboTicket.Services.EventCatalog.Messages;
 using GloboTicket.Services.EventCatalog.Models;
 using GloboTicket.Services.EventCatalog.Repositories;
@@ -15,14 +14,12 @@ namespace GloboTicket.Services.EventCatalog.Controllers
     public class EventController : ControllerBase
     {
         private readonly IEventRepository eventRepository;
-        private readonly IMapper mapper;
-        //private readonly IMessageBus messageBus;
+        private readonly IMapper mapper;        
 
-        public EventController(IEventRepository eventRepository, IMapper mapper)//, IMessageBus messageBus)
+        public EventController(IEventRepository eventRepository, IMapper mapper)
         {
             this.eventRepository = eventRepository;
-            this.mapper = mapper;
-            //this.messageBus = messageBus;
+            this.mapper = mapper;            
         }
 
         [HttpGet]

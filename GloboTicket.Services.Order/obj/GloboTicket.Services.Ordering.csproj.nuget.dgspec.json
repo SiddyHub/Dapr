@@ -65,74 +65,6 @@
         }
       }
     },
-    "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Integration.MessagingBus\\GloboTicket.Integration.MessagingBus.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Integration.MessagingBus\\GloboTicket.Integration.MessagingBus.csproj",
-        "projectName": "GloboTicket.Integration.MessagingBus",
-        "projectPath": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Integration.MessagingBus\\GloboTicket.Integration.MessagingBus.csproj",
-        "packagesPath": "C:\\Users\\simeh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Integration.MessagingBus\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\simeh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netstandard2.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
-            "projectReferences": {
-              "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Integration.Messages\\GloboTicket.Integration.Messages.csproj": {
-                "projectPath": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Integration.Messages\\GloboTicket.Integration.Messages.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
-          "dependencies": {
-            "Microsoft.Azure.ServiceBus": {
-              "target": "Package",
-              "version": "[4.1.4, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "NETStandard.Library": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.409\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Services.Order\\GloboTicket.Services.Ordering.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -163,9 +95,6 @@
             "projectReferences": {
               "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Integration.Messages\\GloboTicket.Integration.Messages.csproj": {
                 "projectPath": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Integration.Messages\\GloboTicket.Integration.Messages.csproj"
-              },
-              "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Integration.MessagingBus\\GloboTicket.Integration.MessagingBus.csproj": {
-                "projectPath": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Integration.MessagingBus\\GloboTicket.Integration.MessagingBus.csproj"
               }
             }
           }

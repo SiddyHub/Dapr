@@ -1,6 +1,5 @@
 using GloboTicket.Services.Marketing.DbContexts;
 using GloboTicket.Services.Marketing.Repositories;
-using GloboTicket.Services.Marketing.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -9,7 +8,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using AutoMapper;
-using GloboTicket.Services.Marketing.Worker;
 using System.Text.Json;
 
 namespace GloboTicket.Services.Marketing
@@ -32,9 +30,7 @@ namespace GloboTicket.Services.Marketing
                     {
                         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
                         PropertyNameCaseInsensitive = true,
-                    }));
-
-            //services.AddHostedService<TimedBasketChangeEventService>();
+                    }));            
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
@@ -44,10 +40,7 @@ namespace GloboTicket.Services.Marketing
 
             services.AddSingleton(new BasketChangeEventRepository(optionsBuilder.Options));
 
-            services.AddScoped<IBasketChangeEventRepository, BasketChangeEventRepository>();
-
-            //services.AddHttpClient<IBasketChangeEventService, BasketChangeEventService>(c =>
-            //    c.BaseAddress = new Uri(Configuration["ApiConfigs:ShoppingBasket:Uri"]));
+            services.AddScoped<IBasketChangeEventRepository, BasketChangeEventRepository>();            
 
             services.AddDbContext<MarketingDbContext>(options =>
             {

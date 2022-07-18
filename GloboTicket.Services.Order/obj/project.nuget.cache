@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "McHtcA4R2+eu51G1jegwLfqPWF0f7/M7QZOFUx/yoKHpMcoTriUZRhXeN1cnGlWkiFl7GzYYYmKAgpFaVI+TXw==",
+  "dgSpecHash": "/52tsk/1l2UB5cRkot+V+KaQ70eYfVoWvIOmmjxDUqTHVKXE4aIUlXeTh01i04jzyBb8X+NOpK+W4gxrdNSjUg==",
   "success": true,
   "projectFilePath": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Services.Order\\GloboTicket.Services.Ordering.csproj",
   "expectedPackageFiles": [

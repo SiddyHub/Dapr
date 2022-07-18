@@ -61,8 +61,7 @@ namespace GloboTicket.Web.Services
 
         public async Task RemoveLine(Guid basketId, Guid lineId)
         {
-            await daprClient.InvokeMethodAsync(HttpMethod.Delete, "shoppingbasket", $"/api/baskets/{basketId}/basketLines/{lineId}");
-            //await daprClient.InvokeMethodAsync<BasketLine>(request);            
+            await daprClient.InvokeMethodAsync(HttpMethod.Delete, "shoppingbasket", $"/api/baskets/{basketId}/basketLines/{lineId}");                      
         }
 
         public async Task<BasketForCheckout> Checkout(Guid basketId, BasketForCheckout basketForCheckout)

@@ -1,5 +1,4 @@
 using AutoMapper;
-using GloboTicket.Integration.MessagingBus;
 using GloboTicket.Services.ShoppingBasket.DbContexts;
 using GloboTicket.Services.ShoppingBasket.Repositories;
 using GloboTicket.Services.ShoppingBasket.Services;
@@ -11,10 +10,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
-using System.Net.Http;
-using Polly;
-using Polly.Extensions.Http;
-using GloboTicket.Services.ShoppingBasket.Worker;
 using Dapr.Client;
 using System.Text.Json;
 

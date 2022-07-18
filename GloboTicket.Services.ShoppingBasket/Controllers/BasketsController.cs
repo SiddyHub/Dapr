@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using GloboTicket.Integration.MessagingBus;
 using GloboTicket.Services.ShoppingBasket.Messages;
 using GloboTicket.Services.ShoppingBasket.Models;
 using GloboTicket.Services.ShoppingBasket.Repositories;
@@ -21,17 +20,13 @@ namespace GloboTicket.Services.ShoppingBasket.Controllers
     public class BasketsController : ControllerBase
     {
         private readonly IBasketRepository basketRepository;
-        private readonly IMapper mapper;
-        //private readonly IMessageBus messageBus;
-        private readonly IDiscountService discountService;
+        private readonly IMapper mapper;                
         private readonly DaprClient daprClient;
 
-        public BasketsController(IBasketRepository basketRepository, IMapper mapper, IDiscountService discountService, Dapr.Client.DaprClient daprClient) //, IMessageBus messageBus
+        public BasketsController(IBasketRepository basketRepository, IMapper mapper, Dapr.Client.DaprClient daprClient)
         {
             this.basketRepository = basketRepository;
-            this.mapper = mapper;
-            //this.messageBus = messageBus;
-            this.discountService = discountService;
+            this.mapper = mapper;                        
             this.daprClient = daprClient ?? throw new ArgumentNullException(nameof(daprClient));
         }
 

@@ -1,7 +1,5 @@
 using AutoMapper;
-using GloboTicket.Integration.MessagingBus;
 using GloboTicket.Services.Ordering.DbContexts;
-using GloboTicket.Services.Ordering.Extensions;
 using GloboTicket.Services.Ordering.Messaging;
 using GloboTicket.Services.Ordering.Repositories;
 using Microsoft.AspNetCore.Builder;

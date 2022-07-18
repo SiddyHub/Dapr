@@ -1,6 +1,4 @@
-using GloboTicket.Integration.MessagingBus;
 using GloboTicket.Services.Payment.Services;
-using GloboTicket.Services.Payment.Worker;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -22,12 +20,9 @@ namespace GloboTicket.Services.Payment
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-            //services.AddHostedService<ServiceBusListener>();
+        {            
             services.AddHttpClient<IExternalGatewayPaymentService, ExternalGatewayPaymentService>(c =>
-                c.BaseAddress = new Uri(Configuration["ApiConfigs:ExternalPaymentGateway:Uri"]));
-
-            //services.AddSingleton<IMessageBus, AzServiceBusMessageBus>();
+                c.BaseAddress = new Uri(Configuration["ApiConfigs:ExternalPaymentGateway:Uri"]));            
 
             services.AddControllers().AddDapr(builder =>
                 builder.UseJsonSerializationOptions(

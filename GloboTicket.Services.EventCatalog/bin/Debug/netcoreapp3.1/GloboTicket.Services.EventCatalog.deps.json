@@ -35,7 +35,7 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
           "Dapr.AspNetCore": "1.7.0",
           "Dapr.Client": "1.7.0",
-          "GloboTicket.Integration.MessagingBus": "1.0.0",
+          "GloboTicket.Integration.Messages": "1.0.0",
           "Microsoft.Azure.ServiceBus": "4.1.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.5",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.5",
@@ -2166,18 +2166,6 @@
         },
         "compile": {
           "GloboTicket.Integration.Messages.dll": {}
-        }
-      },
-      "GloboTicket.Integration.MessagingBus/1.0.0": {
-        "dependencies": {
-          "GloboTicket.Integration.Messages": "1.0.0",
-          "Microsoft.Azure.ServiceBus": "4.1.4"
-        },
-        "runtime": {
-          "GloboTicket.Integration.MessagingBus.dll": {}
-        },
-        "compile": {
-          "GloboTicket.Integration.MessagingBus.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -4941,11 +4929,6 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "GloboTicket.Integration.Messages/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "GloboTicket.Integration.MessagingBus/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

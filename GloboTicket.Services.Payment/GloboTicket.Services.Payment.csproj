@@ -11,11 +11,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\GloboTicket.Integration.MessagingBus\GloboTicket.Integration.MessagingBus.csproj" />
+	  <Folder Include="Controllers\" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Controllers\" />
+	  <ProjectReference Include="..\GloboTicket.Integration.Messages\GloboTicket.Integration.Messages.csproj" />
 	</ItemGroup>
 
 

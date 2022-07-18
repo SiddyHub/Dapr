@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dFmJ1vlvBuKUG/Uq6q/b2lvBpUlRq7RvTH3UtLXWlP0lI3tSrdvV+wLYfG8UtEq/N33uaMMPLFfUc89rEAi8jA==",
+  "dgSpecHash": "fOv4xe0fao2/LZ2/lRdGmLd9JTLp+BO7zbIERJP7r3Cij+g1e45Oy4NNessy+Hlibk8f6Gu8WxBstNtuKw7Sug==",
   "success": true,
   "projectFilePath": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Services.Payment\\GloboTicket.Services.Payment.csproj",
   "expectedPackageFiles": [

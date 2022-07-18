@@ -1,5 +1,4 @@
 using AutoMapper;
-using GloboTicket.Integration.MessagingBus;
 using GloboTicket.Services.EventCatalog.DbContexts;
 using GloboTicket.Services.EventCatalog.Repositories;
 using Microsoft.AspNetCore.Builder;

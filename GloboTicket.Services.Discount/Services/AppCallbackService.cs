@@ -37,40 +37,24 @@ namespace GloboTicket.Services.Discount.Services
                         couponResponse.Code = coupon.Code;
                         couponResponse.AlreadyUsed = coupon.AlreadyUsed;
                         couponResponse.Amount = coupon.Amount;
-                        couponResponse.CouponId = coupon.CouponId.ToString();
-                        //couponResponse = await Task.FromResult<Coupon>(new Coupon
-                        //{
-                        //    couponResponse.Code = coupon.Code,
-                        //    AlreadyUsed = coupon.AlreadyUsed,
-                        //    Amount = coupon.Amount,
-                        //    CouponId = coupon.CouponId.ToString()
-                        //});
+                        couponResponse.CouponId = coupon.CouponId.ToString();                        
                         response.Data = Any.Pack(couponResponse);
                     }
                     break;
                 case "GetCouponByCode":
-                    {
-                        //var dataString = request.Data.Value.ToStringUtf8();
+                    {                        
                         var input = request.Data.Unpack<GetCouponByIdRequest>();
                         var coupon = await couponRepository.GetCouponByCode(input.CouponId);
                         var couponResponse = new Coupon();
                         couponResponse.Code = coupon.Code;
                         couponResponse.AlreadyUsed = coupon.AlreadyUsed;
                         couponResponse.Amount = coupon.Amount;
-                        couponResponse.CouponId = coupon.CouponId.ToString();
-                        //couponResponse = await Task.FromResult<Coupon>(new Coupon
-                        //{
-                        //    couponResponse.Code = coupon.Code,
-                        //    AlreadyUsed = coupon.AlreadyUsed,
-                        //    Amount = coupon.Amount,
-                        //    CouponId = coupon.CouponId.ToString()
-                        //});
+                        couponResponse.CouponId = coupon.CouponId.ToString();                        
                         response.Data = Any.Pack(couponResponse);
                     }
                     break;
                 case "UseCoupon":
-                    {
-                        //var dataString = request.Data.Value.ToStringUtf8();
+                    {                        
                         var input = request.Data.Unpack<GetCouponByIdRequest>();
                         await couponRepository.UseCoupon(Guid.Parse(input.CouponId));                        
                     }
