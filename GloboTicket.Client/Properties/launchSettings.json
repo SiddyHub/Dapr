@@ -19,7 +19,7 @@
     "dapr-self-hosted": {
         "commandName": "Executable",
         "executablePath": "C:\\dapr\\dapr.exe",
-        "commandLineArgs": "run --app-id frontend --app-port 5000 --dapr-http-port 3500 dotnet run",
+        "commandLineArgs": "run --app-id frontend --app-port 5000 --dapr-http-port 3500 --components-path ./AzComponents dotnet run",
         "workingDirectory": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Client",
         "nativeDebugging": true
     }

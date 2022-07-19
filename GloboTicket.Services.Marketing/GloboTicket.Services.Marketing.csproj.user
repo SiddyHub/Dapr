@@ -4,6 +4,6 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup>
-    <ActiveDebugProfile>dapr-self-hosted</ActiveDebugProfile>
+    <ActiveDebugProfile>GloboTicket.Services.Marketing</ActiveDebugProfile>
   </PropertyGroup>
 </Project>
