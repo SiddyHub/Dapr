@@ -21,7 +21,7 @@
         "commandName": "Executable",
         "executablePath": "C:\\dapr\\dapr.exe",
         "commandLineArgs": "run --app-id payment --app-port 5006 --dapr-http-port 3506 --components-path ./AzComponents dotnet run",
-        "workingDirectory": "C:\\Users\\simeh\\OneDrive - Microsoft\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\Path-1\\GloboTicketGithub\\GloboTicket.Services.Payment",
+        "workingDirectory": "project folder path",
         "nativeDebugging": true
     }
   }

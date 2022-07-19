@@ -21,7 +21,7 @@
         "commandName": "Executable",
         "executablePath": "C:\\dapr\\dapr.exe",
         "commandLineArgs": "run --app-id shoppingbasket --app-port 5002 --dapr-http-port 3502 --components-path ./AzComponents dotnet run",
-        "workingDirectory": "C:\\Users\\simeh\\source\\repos\\Practice\\Microservice-to_dapr\\toDapr\\daprized\\GloboTicket\\GloboTicket.Services.ShoppingBasket",
+        "workingDirectory": "project folder path",
         "nativeDebugging": true
     }
   }
