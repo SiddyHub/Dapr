@@ -18,6 +18,6 @@ namespace GloboTicket.Services.ShoppingBasket.Repositories
         void RemoveBasketLine(BasketLine basketLine);
 
         Task<bool> SaveChanges();
-        Task UpdatePricesForIntegrationEvent(Models.PriceUpdate priceUpdate);
+        Task UpdatePricesForIntegrationEvent(Models.PriceUpdatedMessage priceUpdate);
     }
 }

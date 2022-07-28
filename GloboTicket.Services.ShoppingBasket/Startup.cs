@@ -1,4 +1,5 @@
 using AutoMapper;
+using Dapr.Client;
 using GloboTicket.Services.ShoppingBasket.DbContexts;
 using GloboTicket.Services.ShoppingBasket.Repositories;
 using GloboTicket.Services.ShoppingBasket.Services;
@@ -10,7 +11,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
-using Dapr.Client;
 using System.Text.Json;
 
 namespace GloboTicket.Services.ShoppingBasket
@@ -85,10 +85,13 @@ namespace GloboTicket.Services.ShoppingBasket
 
             app.UseRouting();
 
+            app.UseCloudEvents();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapSubscribeHandler();
                 endpoints.MapControllers();
             });
         }        

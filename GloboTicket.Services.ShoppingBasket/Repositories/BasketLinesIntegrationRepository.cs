@@ -15,7 +15,7 @@ namespace GloboTicket.Services.ShoppingBasket.Repositories
             this.dbContextOptions = dbContextOptions;
         }
 
-        public async Task UpdatePricesForIntegrationEvent(Models.PriceUpdate priceUpdate)
+        public async Task UpdatePricesForIntegrationEvent(Models.PriceUpdatedMessage priceUpdate)
         {
             await using (var shoppingBasketDbContext = new ShoppingBasketDbContext(dbContextOptions))
             {

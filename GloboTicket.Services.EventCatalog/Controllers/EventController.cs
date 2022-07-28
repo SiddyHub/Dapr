@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Dapr.Client;
 using GloboTicket.Services.EventCatalog.Messages;
 using GloboTicket.Services.EventCatalog.Models;
 using GloboTicket.Services.EventCatalog.Repositories;
@@ -14,12 +15,14 @@ namespace GloboTicket.Services.EventCatalog.Controllers
     public class EventController : ControllerBase
     {
         private readonly IEventRepository eventRepository;
-        private readonly IMapper mapper;        
+        private readonly IMapper mapper;
+        private readonly DaprClient daprClient;
 
-        public EventController(IEventRepository eventRepository, IMapper mapper)
+        public EventController(IEventRepository eventRepository, IMapper mapper, Dapr.Client.DaprClient daprClient)
         {
             this.eventRepository = eventRepository;
-            this.mapper = mapper;            
+            this.mapper = mapper;
+            this.daprClient = daprClient ?? throw new ArgumentNullException(nameof(daprClient));
         }
 
         [HttpGet]
@@ -52,15 +55,16 @@ namespace GloboTicket.Services.EventCatalog.Controllers
                 Price = priceUpdate.Price
             };
 
-            //try
-            //{
-            //    await messageBus.PublishMessage(priceUpdatedMessage, "priceupdatedmessage");
-            //}
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine(e);
-            //    throw;
-            //}
+            try
+            {
+                //await messageBus.PublishMessage(priceUpdatedMessage, "priceupdatedmessage");
+                await daprClient.PublishEventAsync("pubsub", "priceupdatedmessage", priceUpdatedMessage);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
 
 
             return Ok(priceUpdate);

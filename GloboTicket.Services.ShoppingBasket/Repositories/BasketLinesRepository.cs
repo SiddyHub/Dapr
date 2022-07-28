@@ -58,7 +58,7 @@ namespace GloboTicket.Services.ShoppingBasket.Repositories
             return (await shoppingBasketDbContext.SaveChangesAsync() > 0);
         }
 
-        public async Task UpdatePricesForIntegrationEvent(Models.PriceUpdate priceUpdate)
+        public async Task UpdatePricesForIntegrationEvent(Models.PriceUpdatedMessage priceUpdate)
         {
             var basketLinesToUpdate = shoppingBasketDbContext.BasketLines.Where(x => x.EventId == priceUpdate.EventId);
 

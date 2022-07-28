@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Dapr;
 using GloboTicket.Services.ShoppingBasket.Entities;
 using GloboTicket.Services.ShoppingBasket.Models;
 using GloboTicket.Services.ShoppingBasket.Repositories;
@@ -168,6 +169,6 @@ namespace GloboTicket.Services.ShoppingBasket.Controllers
             await basketChangeEventRepository.AddBasketEvent(basketChangeEvent);
 
             return NoContent();
-        }
+        }        
     }
 }

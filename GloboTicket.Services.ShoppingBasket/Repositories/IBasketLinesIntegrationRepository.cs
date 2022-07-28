@@ -4,6 +4,6 @@ namespace GloboTicket.Services.ShoppingBasket.Repositories
 {
     public interface IBasketLinesIntegrationRepository
     {
-        Task UpdatePricesForIntegrationEvent(Models.PriceUpdate priceUpdate);
+        Task UpdatePricesForIntegrationEvent(Models.PriceUpdatedMessage priceUpdate);
     }
 }

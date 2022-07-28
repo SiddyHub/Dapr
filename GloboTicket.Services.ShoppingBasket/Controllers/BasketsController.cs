@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Polly.CircuitBreaker;
 using Dapr.Client;
+using Dapr;
 
 namespace GloboTicket.Services.ShoppingBasket.Controllers
 {
@@ -22,12 +23,14 @@ namespace GloboTicket.Services.ShoppingBasket.Controllers
         private readonly IBasketRepository basketRepository;
         private readonly IMapper mapper;                
         private readonly DaprClient daprClient;
+        private readonly IBasketLinesRepository basketLinesRepository;
 
-        public BasketsController(IBasketRepository basketRepository, IMapper mapper, Dapr.Client.DaprClient daprClient)
+        public BasketsController(IBasketRepository basketRepository, IMapper mapper, Dapr.Client.DaprClient daprClient, IBasketLinesRepository basketLinesRepository)
         {
             this.basketRepository = basketRepository;
             this.mapper = mapper;                        
             this.daprClient = daprClient ?? throw new ArgumentNullException(nameof(daprClient));
+            this.basketLinesRepository = basketLinesRepository;
         }
 
         [HttpGet("{basketId}", Name = "GetBasket")]
@@ -160,6 +163,14 @@ namespace GloboTicket.Services.ShoppingBasket.Controllers
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, e.StackTrace);
             }
+        }
+
+        [HttpPost("priceupdate")]
+        [Topic("pubsub", "priceupdatedmessage")]
+        public async Task<IActionResult> UpdatePrice(PriceUpdatedMessage priceUpdate)
+        {
+            await basketLinesRepository.UpdatePricesForIntegrationEvent(priceUpdate);
+            return Ok();
         }
     }
 }
