@@ -34,9 +34,7 @@ namespace GloboTicket.Services.ShoppingBasket
                         PropertyNameCaseInsensitive = true,
                     }));
 
-            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
-            //services.AddHostedService<ServiceBusListener>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());            
 
             var optionsBuilder = new DbContextOptionsBuilder<ShoppingBasketDbContext>();
             optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
@@ -46,9 +44,7 @@ namespace GloboTicket.Services.ShoppingBasket
             services.AddScoped<IBasketRepository, BasketRepository>();
             services.AddScoped<IBasketLinesRepository, BasketLinesRepository>();
             services.AddScoped<IEventRepository, EventRepository>();
-            services.AddScoped<IBasketChangeEventRepository, BasketChangeEventRepository>();
-
-            //services.AddSingleton<IMessageBus, AzServiceBusMessageBus>();
+            services.AddScoped<IBasketChangeEventRepository, BasketChangeEventRepository>();            
 
             services.AddSingleton<IEventCatalogService>(c =>
                 new EventCatalogService(DaprClient.CreateInvokeHttpClient("catalog")));
