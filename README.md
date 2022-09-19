@@ -7,6 +7,9 @@ This is part 1 of DAPR Series. Subsequent series and topics can be found below, 
 
 * Will keep updating the above list with new topics and new code base.
 
+The [main](https://github.com/SiddyHub/Dapr/tree/main) branch, is the actual code base.
+The [eshop_daprized](https://github.com/SiddyHub/Dapr/tree/eshop_daprized) branch is the refactored code base with Dapr building blocks.
+
 This version of the code uses **Dapr 1.7**
 
 ## Pre-Requisites to Run the Application
