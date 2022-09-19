@@ -57,7 +57,7 @@ This version of the code uses **Dapr 1.7**
 
    Refer [this link](https://docs.dapr.io/developing-applications/building-blocks/service-invocation/service-invocation-overview/#service-invocation-diagram) to know more about Service Invocation works.
 
-![service_invocation (1)](https://user-images.githubusercontent.com/84964657/190980530-c4581eb5-6f28-4c1f-87be-bdf6639a8923.png)
+![service_invocation drawio](https://user-images.githubusercontent.com/84964657/190981950-1cd548f5-4190-44b4-b7e3-7301c07f790a.png)
 
    We are going to use Dapr SDK for Service Invocation, by referencing `Dap.AspNetCore` Nuget package.
    In Frontend (GloboTicket.Web) Startup.cs file, under ConfigureServices call `services.AddDaprClient();`, which registers Dapr Client into the Inversion Of Control (IoC) container so it can be easiy used in any of our Services and Controllers.
