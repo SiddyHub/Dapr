@@ -23,7 +23,7 @@ This version of the code uses **Dapr 1.7**
 
 ## Architecture Overview
 
-![architecture_overview](https://user-images.githubusercontent.com/84964657/190979715-bc4581cb-5e27-48b6-80bd-e2a7ac4cc977.png)
+![architecture_overview](https://user-images.githubusercontent.com/84964657/190983524-3149e512-44f7-4560-879f-26f4a076962f.png)
 
 1. This is a GloboTicket MVC Application which has a catalog service, which interacts with the shopping basket service, when user enters items in basket. 
 2. The Shoping basket interacts with the Discount service, to check if any valid coupon code has been enetered as part of the Checkout Process.
@@ -33,6 +33,9 @@ This version of the code uses **Dapr 1.7**
 6. The Payment Service talks to an External Payment Provider Service.
 7. On Getting response from the external payment service, the Payment service, places another message on the queue, which will agin be picked up by Order service.
 8. The Marketing service will periodically keep checking for new events like User Basket changes etc., and add entry in database.
+
+Overview with the Dapr sidecar running
+![service_invocation (1)](https://user-images.githubusercontent.com/84964657/190983687-313e70d1-c325-4ad7-b777-4578512d6dc1.png)
 
 ## Running the app locally
 
@@ -57,8 +60,6 @@ This version of the code uses **Dapr 1.7**
 **1. Service Invocation**
 
    Refer [this link](https://docs.dapr.io/developing-applications/building-blocks/service-invocation/service-invocation-overview/#service-invocation-diagram) to know more about Service Invocation works.
-
-![service_invocation drawio](https://user-images.githubusercontent.com/84964657/190981950-1cd548f5-4190-44b4-b7e3-7301c07f790a.png)
 
    We are going to use Dapr SDK for Service Invocation, by referencing `Dap.AspNetCore` Nuget package.
    In Frontend (GloboTicket.Web) Startup.cs file, under ConfigureServices call `services.AddDaprClient();`, which registers Dapr Client into the Inversion Of Control (IoC) container so it can be easiy used in any of our Services and Controllers.
