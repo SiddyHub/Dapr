@@ -25,6 +25,8 @@ This version of the code uses **Dapr 1.7**
 
 ![architecture_overview](https://user-images.githubusercontent.com/84964657/190983524-3149e512-44f7-4560-879f-26f4a076962f.png)
 
+![architecture_overview](https://user-images.githubusercontent.com/84964657/191068659-62575c1a-9b42-4849-96d9-6d60c85db505.png)
+
 1. This is a GloboTicket MVC Application which has a catalog service, which interacts with the shopping basket service, when user enters items in basket. 
 2. The Shoping basket interacts with the Discount service, to check if any valid coupon code has been enetered as part of the Checkout Process.
 3. Once user checks out, the Shopping basket will place an event in queue (Azure Service Bus or Redis).
