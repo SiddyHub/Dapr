@@ -43,11 +43,11 @@ This version of the code uses **Dapr 1.7**
 
    Once the application and side car is running, we can also apply breakpoint to debug the code. Check [this link](https://code.visualstudio.com/docs/editor/debugging#_breakpoints) for more info.
 
-   The Darp extension added also provides information about the applications running and the corresponding components loaded for that application.
+   The Darp extension added also provides information about the applications running and the corresponding components loaded for that application.   
 
 ## Dapr Building Blocks Covered
 
-####1. Service Invocation
+**1. Service Invocation**
 
    To know more about how [Service Invocation](https://docs.dapr.io/developing-applications/building-blocks/service-invocation/service-invocation-overview/#service-invocation-diagram) works.
 
@@ -73,13 +73,14 @@ This version of the code uses **Dapr 1.7**
      With Dapr .NET SDK, the base class for gRPC comes pre-packaged, so no need to import the Protobuf files and utilize the Protobuf code generation so that it materializes to a C# class.
 
    - The base class `AppCallback.AppCallbackBase` that our Discount gRPC service must extend has three methods that have to be overriden – `OnInvoke, ListTopicSubscriptions, and OnTopicEvent`.
+     
      The `OnInvoke` method gets called whenever a method has been invoked via the Service Invocation building block. In contrast with HTTP-based services, there is a single method that accepts all method invocations. You will typically have a switch-case statement for each of the methods your service supports.
 
    - Also a Protobuf file need to be created for Request / Response message variable, and add it in the project using "Connected Services" with Client or Server option respectively.
 
    - Lastly, we need to set `app-ssl` to true, for Discount service Dapr sidecar
 
-####2. Publish and Subscribe
+**2. Publish and Subscribe**
 
    To know more about how [Publish & Subscribe](https://docs.dapr.io/developing-applications/building-blocks/pubsub/pubsub-overview/#pubsub-api-in-dapr) works.
    For our broker service we would be using Azure Service Bus (If Azure Subscription is not available one can use Redis Cache container spun up by Dapr).
@@ -121,7 +122,7 @@ This version of the code uses **Dapr 1.7**
      }
      ```
 
-####3. Resource Bindings
+**3. Resource Bindings**
    
    - Using Dapr Output Binding to send mail via SMTP
      Refer [this link](https://docs.dapr.io/reference/components-reference/supported-bindings/smtp/#component-format) for complete component format metadata fields.
@@ -179,12 +180,12 @@ This version of the code uses **Dapr 1.7**
      }
      ```
 
-####4. Secrets
+**4. Secrets**
 
    In our code example we would be using local secret store to reference our secret values.
    Refer [this link](https://github.com/dapr/quickstarts/blob/master/secrets_management/components/local-secret-store.yaml) to know how secret management works behind the scene.
 
-####5. Monitoring and Observability
+**5. Monitoring and Observability**
 
    Dapr uses Zipkin protocol for distributed traces and metric collection. This is enabled with a Dapr Configuration file.
    After we have run our services via VS Code, go to `http://localhost:9411` , click `Run Query` button to view trace logs.
