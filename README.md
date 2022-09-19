@@ -5,7 +5,7 @@ This is part 1 of DAPR Series. Subsequent series and topics can be found below, 
 1. [Polyglot Persistence with Dapr](https://github.com/SiddyHub/DaprDataManagement)
 2. [Using Azure Ad Identity](https://github.com/SiddyHub/DaprAzureAdIdentity)
 
-* Will keep updating the above list with topics and new code base.
+* Will keep updating the above list with new topics and new code base.
 
 This version of the code uses **Dapr 1.7**
 
@@ -31,7 +31,7 @@ This version of the code uses **Dapr 1.7**
 
 ## Running the app locally
 
-1. Once VS Code with [Dapr Extension](https://docs.dapr.io/developing-applications/ides/vscode/vscode-dapr-extension/) has been installed, we can leverage to scaffold the configuration for us, instead of manually configuring launch.json
+   Once VS Code with [Dapr Extension](https://docs.dapr.io/developing-applications/ides/vscode/vscode-dapr-extension/) has been installed, we can leverage to scaffold the configuration for us, instead of manually configuring launch.json
    A **tasks.json** file has also been prepared by the Dapr extension task.
 
    Follow [this link](https://docs.dapr.io/developing-applications/ides/vscode/vscode-how-to-debug-multiple-dapr-apps/#prerequisites) to know more about configuring `launch.json and tasks.json`
@@ -40,11 +40,12 @@ This version of the code uses **Dapr 1.7**
 
    Once the application and side car is running, we can also apply breakpoint to debug the code. Check [this link](https://code.visualstudio.com/docs/editor/debugging#_breakpoints) for more info.
 
-   The Darp extension added also provides information about the applications running, the corresponding components loaded for that application etc.   
+   The Darp extension added also provides information about the applications running and the corresponding components loaded for that application.
 
 ## Dapr Building Blocks Covered
 
-1. Service Invocation
+####1. Service Invocation
+
    To know more about how [Service Invocation](https://docs.dapr.io/developing-applications/building-blocks/service-invocation/service-invocation-overview/#service-invocation-diagram) works.
 
    We are going to use Dapr SDK for Service Invocation, by referencing `Dap.AspNetCore` Nuget package.
@@ -75,14 +76,17 @@ This version of the code uses **Dapr 1.7**
 
    - Lastly, we need to set `app-ssl` to true, for Discount service Dapr sidecar
 
-2. Publish and Subscribe
+####2. Publish and Subscribe
+
    To know more about how [Publish & Subscribe](https://docs.dapr.io/developing-applications/building-blocks/pubsub/pubsub-overview/#pubsub-api-in-dapr) works.
-   For our broker service we would be using Azure Service Bus. /(If Azure Subscription is not available one can use Redis Cache container spun up by Dapr.)
+   For our broker service we would be using Azure Service Bus (If Azure Subscription is not available one can use Redis Cache container spun up by Dapr).
 
    - Receiving messages with topic subscriptions
      Dapr applications can subscribe to published topics via two methods that support the same features: declarative and programmatic.
+
      In Our code we would be using the `programmatic approach`.
-     Refer [this](https://docs.dapr.io/developing-applications/building-blocks/pubsub/subscription-methods/#pubsub-api-subscription-methods) link to know more.
+
+     Refer [this link](https://docs.dapr.io/developing-applications/building-blocks/pubsub/subscription-methods/#pubsub-api-subscription-methods) to know more.
 
    - For our PubSub component definition we would be using Azure Service Bus message broker.
      Refer [this link](https://docs.dapr.io/reference/components-reference/supported-pubsub/setup-azure-servicebus/#component-format) for complete component format metadata fields for Azure Service Bus.
@@ -104,7 +108,7 @@ This version of the code uses **Dapr 1.7**
      `await daprClient.PublishEventAsync("pubsub", "checkoutmessage", basketCheckoutMessage);`
    
      To Subscribe to a Dapr Topic  
-     ASP.NET controller method signature can be decorated with the /[Topic] attribute to subscribe to messages from the topic
+     ASP.NET controller method signature can be decorated with the [Topic] attribute to subscribe to messages from the topic
      ```
      [HttpPost("submitorder")]
      [Topic("pubsub", "checkoutmessage")]
@@ -114,7 +118,7 @@ This version of the code uses **Dapr 1.7**
      }
      ```
 
-3. Resource Bindings
+####3. Resource Bindings
    
    - Using Dapr Output Binding to send mail via SMTP
      Refer [this link](https://docs.dapr.io/reference/components-reference/supported-bindings/smtp/#component-format) for complete component format metadata fields.
@@ -172,11 +176,13 @@ This version of the code uses **Dapr 1.7**
      }
      ```
 
-4. Secrets
+####4. Secrets
+
    In our code example we would be using local secret store to reference our secret values.
    Refer [this link](https://github.com/dapr/quickstarts/blob/master/secrets_management/components/local-secret-store.yaml) to know how secret management works behind the scene.
 
-5. Monitoring and Observability
+####5. Monitoring and Observability
+
    Dapr uses Zipkin protocol for distributed traces and metric collection. This is enabled with a Dapr Configuration file.
    After we have run our services via VS Code, go to `http://localhost:9411` , click `Run Query` button to view trace logs.
    
