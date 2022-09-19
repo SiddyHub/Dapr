@@ -107,14 +107,14 @@ This version of the code uses **Dapr 1.7**
      {
         endpoints.MapSubscribeHandler();
         endpoints.MapControllers();
-     });
-
-     To Publish messages on Dapr
+     });     
      ```
+     To Publish messages on Dapr:
      After we configure each ASP.NET Web API project to support subscriber handlers and process CloudEvents, we are ready to publish our first message via the Dapr ASP.NET SDK.
+
      `await daprClient.PublishEventAsync("pubsub", "checkoutmessage", basketCheckoutMessage);`
    
-     To Subscribe to a Dapr Topic  
+     To Subscribe to a Dapr Topic:  
      ASP.NET controller method signature can be decorated with the [Topic] attribute to subscribe to messages from the topic
      ```
      [HttpPost("submitorder")]
@@ -127,13 +127,14 @@ This version of the code uses **Dapr 1.7**
 
 **3. Resource Bindings**
    
-   - Using Dapr Output Binding to send mail via SMTP
-     Refer [this link](https://docs.dapr.io/reference/components-reference/supported-bindings/smtp/#component-format) for complete component format metadata fields.
+   - For Dapr Output Binding to send mail via SMTP.
+     (Refer [this link](https://docs.dapr.io/reference/components-reference/supported-bindings/smtp/#component-format) for complete component format metadata fields)
 
-     We would be using an Open Source component called `MailDev`. As a pre-requisite, make sure to start maildev locally by using the docker run command `$ docker run -p 1080:1080 -p 1025:1025 maildev/maildev`
+     We would be using an Open Source component called `MailDev`. As a pre-requisite, make sure to start maildev locally by using the docker run command `$ docker run -p 1080:1080. -p 1025:1025 maildev/maildev`
      Refer [this link](https://github.com/maildev/maildev) for more info.
    
      Code Changes:
+
      We would be sending an email once the Order has been successfully placed after Checkout, and added in the Repository.
      When sending an email, the metadata in the configuration and in the request is combined. The combined set of metadata must contain at least the `emailFrom`, `emailTo` and `subject` fields.
 
@@ -151,8 +152,8 @@ This version of the code uses **Dapr 1.7**
                 body, metadata);
      ```
 
-   - Using Dapr Cron Input Binding
-     Refer [this link](https://docs.dapr.io/reference/components-reference/supported-bindings/cron/#component-format) for complete component format metadata fields.
+   - For Dapr Cron Input Binding.
+     (Refer [this link](https://docs.dapr.io/reference/components-reference/supported-bindings/cron/#component-format) for complete component format metadata fields)
      In Our code the Cron Job would be used by the `Marketing` service every 1m, to check for any Shopping Basket event changes (adding or removing items)
 
      A cron binding adopts the following configuration:
