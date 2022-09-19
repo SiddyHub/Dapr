@@ -40,7 +40,7 @@ Overview with the Dapr sidecar running:
 
 ## Running the app locally
 
-   Once VS Code with [Dapr Extension](https://docs.dapr.io/developing-applications/ides/vscode/vscode-dapr-extension/) has been installed, we can leverage to scaffold the configuration for us, instead of manually configuring **launch.json**.
+   Once VS Code with [Dapr Extension](https://docs.dapr.io/developing-applications/ides/vscode/vscode-dapr-extension/) has been installed, we can leverage it to scaffold the configuration for us, instead of manually configuring **launch.json**.
 
    A **tasks.json** file also gets prepared by the Dapr extension task.
 
