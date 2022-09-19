@@ -34,7 +34,8 @@ This version of the code uses **Dapr 1.7**
 7. On Getting response from the external payment service, the Payment service, places another message on the queue, which will agin be picked up by Order service.
 8. The Marketing service will periodically keep checking for new events like User Basket changes etc., and add entry in database.
 
-Overview with the Dapr sidecar running
+Overview with the Dapr sidecar running:
+
 ![service_invocation (1)](https://user-images.githubusercontent.com/84964657/190983687-313e70d1-c325-4ad7-b777-4578512d6dc1.png)
 
 ## Running the app locally
