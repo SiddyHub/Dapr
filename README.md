@@ -5,10 +5,10 @@ This is part 1 of DAPR Series. Subsequent series and topics can be found below, 
 1. [Polyglot Persistence with Dapr](https://github.com/SiddyHub/DaprDataManagement)
 2. [Using Azure Ad Identity](https://github.com/SiddyHub/DaprAzureAdIdentity)
 
-* Will keep updating the above list with new topics and new code base.
+*Will keep updating the above list with new topics and new code base.
 
-The [main](https://github.com/SiddyHub/Dapr/tree/main) branch, is the actual code base.
-The [eshop_daprized](https://github.com/SiddyHub/Dapr/tree/eshop_daprized) branch is the refactored code base with Dapr building blocks.
+The [main](https://github.com/SiddyHub/Dapr/tree/main) branch, is the actual code base,
+and [eshop_daprized](https://github.com/SiddyHub/Dapr/tree/eshop_daprized) branch is the refactored code base with Dapr building blocks.
 
 This version of the code uses **Dapr 1.7**
 
@@ -49,15 +49,17 @@ This version of the code uses **Dapr 1.7**
 
 **1. Service Invocation**
 
-   To know more about how [Service Invocation](https://docs.dapr.io/developing-applications/building-blocks/service-invocation/service-invocation-overview/#service-invocation-diagram) works.
+   Refer [this link](https://docs.dapr.io/developing-applications/building-blocks/service-invocation/service-invocation-overview/#service-invocation-diagram) to know more about Service Invocation works.
 
    We are going to use Dapr SDK for Service Invocation, by referencing `Dap.AspNetCore` Nuget package.
    In Frontend (GloboTicket.Web) Startup.cs file, under ConfigureServices call `services.AddDaprClient();`, which registers Dapr Client into the Inversion Of Control (IoC) container so it can be easiy used in any of our Services and Controllers.
+   
    For our backend services we register our EventCatalog and Order service as a Singleton and Invokes HTTP services using HttpClient by passing inside constructor an HTTP Client been created with `DaprClient.CreateInvokeHttpClient("appid")`. This creates HTTP Client that's already set up for us with correct base address.
 
    Our ShoppingBasket and Discount services are registered as Scoped, and Invokes HTTP services using DaprClient.
 
    For ASP.NET Core controllers, the process for setting up the Dapr support inside an ASP.NET Core project:
+   
    Firstly, install the `Dapr.AspNetCore` NuGet package.
  
    Then in the `ConfigureServices` method of the Startup class of your ASP.NET Core project, add the following line to register Dapr within controllers, add an instance of the DaprClient, and configure some model binders. Optionally, you can set an additional configuration for the Dapr client by using the builder pattern inside AddDapr:
@@ -82,7 +84,8 @@ This version of the code uses **Dapr 1.7**
 
 **2. Publish and Subscribe**
 
-   To know more about how [Publish & Subscribe](https://docs.dapr.io/developing-applications/building-blocks/pubsub/pubsub-overview/#pubsub-api-in-dapr) works.
+   Refer [this link](https://docs.dapr.io/developing-applications/building-blocks/pubsub/pubsub-overview/#pubsub-api-in-dapr) to know more about how Publish & Subscribe works.
+   
    For our broker service we would be using Azure Service Bus (If Azure Subscription is not available one can use Redis Cache container spun up by Dapr).
 
    - Receiving messages with topic subscriptions
