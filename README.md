@@ -23,6 +23,8 @@ This version of the code uses **Dapr 1.7**
 
 ## Architecture Overview
 
+![architecture_overview](https://user-images.githubusercontent.com/84964657/190979715-bc4581cb-5e27-48b6-80bd-e2a7ac4cc977.png)
+
 1. This is a GloboTicket MVC Application which has a catalog service, which interacts with the shopping basket service, when user enters items in basket. 
 2. The Shoping basket interacts with the Discount service, to check if any valid coupon code has been enetered as part of the Checkout Process.
 3. Once user checks out, the Shopping basket will place an event in queue (Azure Service Bus or Redis).
@@ -41,15 +43,21 @@ This version of the code uses **Dapr 1.7**
 
    In VS Code go to Run and Debug, and Run All Projects at the same time or Individual project.
 
+![callstack](https://user-images.githubusercontent.com/84964657/190981135-e4c65db6-e808-4840-b090-a964ce7368cc.jpg)
+
    Once the application and side car is running, we can also apply breakpoint to debug the code. Check [this link](https://code.visualstudio.com/docs/editor/debugging#_breakpoints) for more info.
 
-   The Darp extension added also provides information about the applications running and the corresponding components loaded for that application.   
+   The Darp extension added also provides information about the applications running and the corresponding components loaded for that application.
+
+   ![dapr_extension](https://user-images.githubusercontent.com/84964657/190981042-403d3eab-dce8-4012-951c-d57d55c43a94.jpg)
 
 ## Dapr Building Blocks Covered
 
 **1. Service Invocation**
 
    Refer [this link](https://docs.dapr.io/developing-applications/building-blocks/service-invocation/service-invocation-overview/#service-invocation-diagram) to know more about Service Invocation works.
+
+![service_invocation (1)](https://user-images.githubusercontent.com/84964657/190980530-c4581eb5-6f28-4c1f-87be-bdf6639a8923.png)
 
    We are going to use Dapr SDK for Service Invocation, by referencing `Dap.AspNetCore` Nuget package.
    In Frontend (GloboTicket.Web) Startup.cs file, under ConfigureServices call `services.AddDaprClient();`, which registers Dapr Client into the Inversion Of Control (IoC) container so it can be easiy used in any of our Services and Controllers.
@@ -74,7 +82,7 @@ This version of the code uses **Dapr 1.7**
    - To implement a gRPC service to run side by side with Dapr, we have to implement the **AppCallback** interface.
      With Dapr .NET SDK, the base class for gRPC comes pre-packaged, so no need to import the Protobuf files and utilize the Protobuf code generation so that it materializes to a C# class.
 
-   - The base class `AppCallback.AppCallbackBase` that our Discount gRPC service must extend has three methods that have to be overriden – `OnInvoke, ListTopicSubscriptions, and OnTopicEvent`.
+   - The base class `AppCallback.AppCallbackBase` that our Discount gRPC service must extend has three methods that have to be overriden â€“ `OnInvoke, ListTopicSubscriptions, and OnTopicEvent`.
      
      The `OnInvoke` method gets called whenever a method has been invoked via the Service Invocation building block. In contrast with HTTP-based services, there is a single method that accepts all method invocations. You will typically have a switch-case statement for each of the methods your service supports.
 
@@ -154,6 +162,7 @@ This version of the code uses **Dapr 1.7**
 
    - For Dapr Cron Input Binding.
      (Refer [this link](https://docs.dapr.io/reference/components-reference/supported-bindings/cron/#component-format) for complete component format metadata fields)
+
      In Our code the Cron Job would be used by the `Marketing` service every 1m, to check for any Shopping Basket event changes (adding or removing items)
 
      A cron binding adopts the following configuration:
@@ -194,6 +203,8 @@ This version of the code uses **Dapr 1.7**
    Dapr uses Zipkin protocol for distributed traces and metric collection. This is enabled with a Dapr Configuration file.
    After we have run our services via VS Code, go to `http://localhost:9411` , click `Run Query` button to view trace logs.
    
+   ![zipkin](https://user-images.githubusercontent.com/84964657/190981484-591e2939-7181-4896-8007-835c7bf8d50d.jpg)
+
    Another great feature we can use with Observability is Dapr dashboard, a web base UI.
    Refer [this link](https://github.com/dapr/dashboard) to know more about its capability and how to launch the dashboard.
 
