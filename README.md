@@ -103,7 +103,6 @@ Overview with the Dapr sidecar running:
      Dapr applications can subscribe to published topics via two methods that support the same features: declarative and programmatic.
 
      In Our code we would be using the `programmatic approach`.
-
      Refer [this link](https://docs.dapr.io/developing-applications/building-blocks/pubsub/subscription-methods/#pubsub-api-subscription-methods) to know more.
 
    - For our PubSub component definition we would be using Azure Service Bus message broker.
@@ -121,7 +120,8 @@ Overview with the Dapr sidecar running:
      });     
      ```
      To Publish messages on Dapr:
-     After we configure each ASP.NET Web API project to support subscriber handlers and process CloudEvents, we are ready to publish our first message via the Dapr ASP.NET SDK.
+
+     After we configure each ASP.NET Web API project to support subscriber handlers and process CloudEvents, we are ready to publish our first message via the Dapr      ASP.NET SDK.
 
      `await daprClient.PublishEventAsync("pubsub", "checkoutmessage", basketCheckoutMessage);`
    
