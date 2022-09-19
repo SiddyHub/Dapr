@@ -36,20 +36,21 @@ This version of the code uses **Dapr 1.7**
 
 ## Running the app locally
 
-   Once VS Code with [Dapr Extension](https://docs.dapr.io/developing-applications/ides/vscode/vscode-dapr-extension/) has been installed, we can leverage to scaffold the configuration for us, instead of manually configuring launch.json
-   A **tasks.json** file has also been prepared by the Dapr extension task.
+   Once VS Code with [Dapr Extension](https://docs.dapr.io/developing-applications/ides/vscode/vscode-dapr-extension/) has been installed, we can leverage to scaffold the configuration for us, instead of manually configuring **launch.json**.
+
+   A **tasks.json** file also gets prepared by the Dapr extension task.
 
    Follow [this link](https://docs.dapr.io/developing-applications/ides/vscode/vscode-how-to-debug-multiple-dapr-apps/#prerequisites) to know more about configuring `launch.json and tasks.json`
 
    In VS Code go to Run and Debug, and Run All Projects at the same time or Individual project.
 
-![callstack](https://user-images.githubusercontent.com/84964657/190981135-e4c65db6-e808-4840-b090-a964ce7368cc.jpg)
+![callstack](https://user-images.githubusercontent.com/84964657/190982330-5724fbae-2caa-49ec-a87a-db425db661c5.jpg)
 
    Once the application and side car is running, we can also apply breakpoint to debug the code. Check [this link](https://code.visualstudio.com/docs/editor/debugging#_breakpoints) for more info.
 
    The Darp extension added also provides information about the applications running and the corresponding components loaded for that application.
 
-   ![dapr_extension](https://user-images.githubusercontent.com/84964657/190981042-403d3eab-dce8-4012-951c-d57d55c43a94.jpg)
+   ![dapr_extension](https://user-images.githubusercontent.com/84964657/190982176-d7aa1947-d33a-4ca8-b318-bcc5186db3c7.jpg)
 
 ## Dapr Building Blocks Covered
 
