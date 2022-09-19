@@ -36,7 +36,7 @@ This version of the code uses **Dapr 1.7**
 
 Overview with the Dapr sidecar running:
 
-![service_invocation (1)](https://user-images.githubusercontent.com/84964657/190983687-313e70d1-c325-4ad7-b777-4578512d6dc1.png)
+![service_invocation](https://user-images.githubusercontent.com/84964657/190984347-bc4d830b-5d20-4ebf-b0c3-08f563d0442f.png)
 
 ## Running the app locally
 
