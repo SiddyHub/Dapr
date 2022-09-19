@@ -40,6 +40,9 @@ Overview with the Dapr sidecar running:
 
 ## Running the app locally
 
+   Our Microservices i.e. Discount, Event Catalog, Shopping Basket, Ordering and Marketing have underlying data stores, which need to be created first. There are migrations folder under each service project which needs to be executed to create the databases.
+   So Run Database Migrations for each service project, and once all data stores are created, verify it in SQL Server Management Tools.
+   
    Once VS Code with [Dapr Extension](https://docs.dapr.io/developing-applications/ides/vscode/vscode-dapr-extension/) has been installed, we can leverage it to scaffold the configuration for us, instead of manually configuring **launch.json**.
 
    A **tasks.json** file also gets prepared by the Dapr extension task.
