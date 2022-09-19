@@ -44,7 +44,7 @@ This version of the code uses **Dapr 1.7**
 
    In VS Code go to Run and Debug, and Run All Projects at the same time or Individual project.
 
-![callstack](https://user-images.githubusercontent.com/84964657/190982330-5724fbae-2caa-49ec-a87a-db425db661c5.jpg)
+![callstack](https://user-images.githubusercontent.com/84964657/190982330-5724fbae-2caa-49ec-a87a-db425db661c5.jpg)  ![debug](https://user-images.githubusercontent.com/84964657/190982955-b0a69850-4795-444a-aaf3-e2d6120dc1b2.jpg)
 
    Once the application and side car is running, we can also apply breakpoint to debug the code. Check [this link](https://code.visualstudio.com/docs/editor/debugging#_breakpoints) for more info.
 
