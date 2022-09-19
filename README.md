@@ -54,7 +54,7 @@ Overview with the Dapr sidecar running:
 
    The Darp extension added also provides information about the applications running and the corresponding components loaded for that application.
 
-   ![dapr_extension](https://user-images.githubusercontent.com/84964657/190985050-a9f670f0-0d02-46a4-83a7-3aebdf87b0d2.jpg)
+   ![dapr_extension_components](https://user-images.githubusercontent.com/84964657/190985678-5b7d24c8-095d-43e5-86fe-0002a5d985ee.png)
 
 ## Dapr Building Blocks Covered
 
