@@ -223,6 +223,6 @@ Overview with the Dapr sidecar running:
 ## Troubleshooting notes
 
 - If not able to load Dapr projects when running from VS Code, check if Docker Engine is running, so that it can load all components.
-- If using Azure Service Bus as a Pub Sub Message broker make sure to enter primary connection string in `secrets.json`
+- If using Azure Service Bus as a Pub Sub Message broker make sure to enter primary connection string value for **"servicebus"** key in `secrets.json`
 - If mail binding is not working, make sure `maildev`image is running. Refer [this link](https://github.com/maildev/maildev) for more info.
 - For any more service issues, we can check Zipkin trace logs.
