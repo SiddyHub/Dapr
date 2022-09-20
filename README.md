@@ -2,7 +2,7 @@
 This repository is intended to cover majority of the fundamental building blocks of Dapr. The idea is to refactor the code written in ASP.NET Core 3.1 in main branch and daprize it from scratch, so that we can reduce our code base by focusing on core business logic and leverage Dapr for integrations to Azure Services.
 
 This is part 1 of DAPR Series. Subsequent series and topics can be found below, to cover more features of Dapr.
-1. [Polyglot Persistence with Dapr](https://github.com/SiddyHub/DaprDataManagement)
+1. [Polyglot Persistence using Dapr State Management](https://github.com/SiddyHub/DaprDataManagement)
 2. [Using Azure Ad Identity](https://github.com/SiddyHub/DaprAzureAdIdentity)
 
 *Will keep updating the above list with new topics and new code base.
