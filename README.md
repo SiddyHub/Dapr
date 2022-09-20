@@ -12,4 +12,6 @@ This version of the code uses Dapr 1.7
 The [main](https://github.com/SiddyHub/Dapr/tree/main) branch, is the actual code base,
 and [eshop_daprized](https://github.com/SiddyHub/Dapr/tree/eshop_daprized) branch is the refactored code base with Dapr building blocks.
 
+So please switch to [eshop_daprized](https://github.com/SiddyHub/Dapr/tree/eshop_daprized) branch to follow this project.
+
 This version of the code uses **Dapr 1.7**
