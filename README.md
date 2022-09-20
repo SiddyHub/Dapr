@@ -57,7 +57,9 @@ Overview with the Dapr sidecar running:
 
 ![callstack](https://user-images.githubusercontent.com/84964657/190982330-5724fbae-2caa-49ec-a87a-db425db661c5.jpg) 
 
-   Once the application and side car is running, we can also apply breakpoint to debug the code. Check [this link](https://code.visualstudio.com/docs/editor/debugging#_breakpoints) for more info.
+   Once the application and side car is running, navigate to address **`http://localhost:5000`** in your preferred browser, to access the application.
+
+   We can also apply breakpoint to debug the code. Check [this link](https://code.visualstudio.com/docs/editor/debugging#_breakpoints) for more info.
 
 ![breakpoint](https://user-images.githubusercontent.com/84964657/191080455-2aa1a8f9-a051-410b-9a42-617184b5ee39.jpg)
 
