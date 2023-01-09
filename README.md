@@ -4,6 +4,7 @@ This repository is intended to cover majority of the fundamental building blocks
 This is part 1 of DAPR Series. Subsequent series and topics can be found below, to cover more features of Dapr.
 1. [Polyglot Persistence using Dapr State Management](https://github.com/SiddyHub/DaprDataManagement)
 2. [Using Azure Ad Identity](https://github.com/SiddyHub/DaprAzureAdIdentity)
+3. [Deploy to Azure Kubernetes Service (AKS)](https://github.com/SiddyHub/DaprAksDeploy)
 
 *Will keep updating the above list with new topics and new code base.
 
