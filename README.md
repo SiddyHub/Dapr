@@ -5,6 +5,7 @@ This is part 1 of DAPR Series. Subsequent series and topics can be found below, 
 1. [Polyglot Persistence using Dapr State Management](https://github.com/SiddyHub/DaprDataManagement)
 2. [Using Azure Ad Identity](https://github.com/SiddyHub/DaprAzureAdIdentity)
 3. [Deploy to Azure Kubernetes Service (AKS)](https://github.com/SiddyHub/DaprAksDeploy)
+4. [Using Dapr With Aspire](https://github.com/SiddyHub/DaprWithAspire)
 
 *Will keep updating the above list with new topics and new code base.
 
@@ -27,12 +28,12 @@ This version of the code uses **Dapr 1.7**
 ![architecture_overview](https://user-images.githubusercontent.com/84964657/191068659-62575c1a-9b42-4849-96d9-6d60c85db505.png)
 
 1. This is a GloboTicket MVC Application which has a catalog service, which interacts with the shopping basket service, when user enters items in basket. 
-2. The Shoping basket interacts with the Discount service, to check if any valid coupon code has been enetered as part of the Checkout Process.
+2. The Shopping basket interacts with the Discount service, to check if any valid coupon code has been entered as part of the Checkout Process.
 3. Once user checks out, the Shopping basket will place an event in queue (Azure Service Bus or Redis).
 4. The Order Service picks up this event and create a new Order.
 5. The Order service places a new event in queue for another service i.e. Payment.
 6. The Payment Service talks to an External Payment Provider Service.
-7. On Getting response from the external payment service, the Payment service, places another message on the queue, which will agin be picked up by Order service.
+7. On Getting response from the external payment service, the Payment service, places another message on the queue, which will again be picked up by Order service.
 8. The Marketing service will periodically keep checking for new events like User Basket changes etc., and add entry in database.
 
 Overview with the Dapr sidecar running:
